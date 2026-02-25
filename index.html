@@ -4,9 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ninashuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .cursor {
+      animation: blink 1s step-end infinite;
+    }
+  </style>
 </head>
-<body>
-  <h1>Hello, World!</h1>
-  <p>Welcome to my GitHub Pages site.</p>
+<body class="min-h-screen bg-neutral-950 flex items-center justify-center font-mono text-neutral-200">
+  <div class="text-center px-16 py-12 border border-neutral-800 rounded">
+    <h1 class="text-4xl font-normal tracking-widest mb-2">
+      ninashuping<span class="cursor inline-block w-0.5 h-7 bg-neutral-200 ml-1 align-middle"></span>
+    </h1>
+    <p class="text-neutral-600 text-sm tracking-wider">more coming soon</p>
+  </div>
 </body>
 </html>
