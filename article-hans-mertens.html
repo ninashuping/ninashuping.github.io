@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transforming Rover Engineering — Nina Shuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            terra:   '#793812',
+            sage:    '#6096f5',
+            sky:     '#4070c5',
+            cream:   '#f7f5f0',
+            heading: '#1a1a1a',
+            prose:   '#4a4a4a',
+            muted:   '#717171',
+            faint:   '#9e9e9e',
+            rule:    '#e2ddd8',
+            surface: '#edeae4',
+            dark:    '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .sidebar-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .nav-dot { transition: transform 0.2s, opacity 0.2s; }
+    .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
+    .nav-link.active .nav-dot { opacity: 1; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-prose flex min-h-screen">
+
+  <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
+    <div class="px-8 pt-10 pb-7 border-b border-rule">
+      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+        Nina<br>Shuping
+      </a>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
+    </div>
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
+      <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
+        About
+      </a>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
+        Photography
+      </a>
+      <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
+        Writing
+      </a>
+    </nav>
+    <div class="px-8 py-7 border-t border-rule space-y-1">
+      <a href="mailto:knshuping@gmail.com" class="text-[11px] text-muted hover:text-neutral-200 transition block font-display tracking-wide">knshuping@gmail.com</a>
+      <div class="flex gap-3 pt-1">
+        <a href="https://www.linkedin.com/in/katrina-shuping" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">Scholar</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ml-56 flex-1">
+
+    <section class="px-16 pt-20 pb-10 border-b border-rule">
+      <a href="writing.html" class="text-xs font-display tracking-widest uppercase text-faint hover:text-prose transition-colors">← Writing</a>
+      <p class="text-[10px] font-display tracking-widest uppercase text-sky mt-6 mb-3">University of Hawaii Graduate Research</p>
+      <h1 class="font-display text-4xl font-extrabold text-heading leading-tight mb-4 max-w-2xl">
+        Transforming Rover Engineering with Least Confident Sampling Strategy with Hans Mertens
+      </h1>
+      <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
+    </section>
+
+    <article class="px-16 py-14 max-w-3xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+
+        <p>Hans Mertens has worked in various fields, including medicine, the automotive industry and planetary exploration. He cares about working on interesting problems to solve using machine learning and robotics in these diverse contexts. Each of these fields provides interesting yet vastly different ways to grow his skillset as an engineer and apply machine learning to robotics. Hans studied at RWTH Aachen university, in Germany where he is from, as a mechanical engineer. During his undergraduate years Hans worked at Mercedes doing engine development. However at the end of his undergraduate degree he had realized that he enjoyed the data science aspects of his work more than the mechanical. Additionally this was a time where machine learning and artificial intelligence was making fast leaps and was piquing the interest of academics and tech enthusiasts alike. Hans was no different. He worked to include more machine learning into his research during his masters which he also got at RWTH Aachen.</p>
+
+        <p>During this time he started working in the medical field helping to advance the capabilities of robots used to help people rehabilitate injuries. Hans explained that in Germany the medical field is not privatized and as a result there are a lot of open jobs in medicine, particularly nursing and physical therapists. The hope was to have a robot be able to help people with their physical therapy and fill in some of these labor gaps. He states that usually in physical therapy you get a plan for exercises that you do with the doctor and at home. Instead these robots would help you do these exercises and track your progress, help you do the right exercises and apply the right pressure so that you could heal faster and better. In order to do this however the robot has to have an incredible understanding of the human body. Hans worked on the code that helped find the spatial coordinates of joints using a convolutional neural network and simple cameras. Hans was hoping to study abroad during his masters and had found Dr. Frances Zhu at UH Manoa because of their shared interest in machine learning and robotics. Due to Covid, he was unable to study abroad during his master's degree, but was given the opportunity to conduct research for his thesis at UH Manoa. Now pursuing his PhD in Hawaii, Hans works with the Robotics Space Exploration lab (RoSE lab) to develop machine learning models for learning how rovers move on planetary soil. Currently humans control the rover's movement and the RoSE lab is developing autonomous rover movement with the goal of having a larger number of smaller autonomous rovers. In order to do that however, we must first understand and teach these rovers how to move on different planetary terrain. This includes answering questions about when you go over vs around a rock, how much the rover is sinking into the regolith, whether the robot is on a hill or not, how the robot can move on the terrain, what is the composition of the regolith, sandy or rocky?</p>
+
+        <p>While many of Hans's coworkers are working on building rovers, Hans is working on developing algorithms that learn system dynamics on small data sets. One issue with having rovers run autonomously is how you train the algorithm to understand the interactions with the environment of a different planet. Current machine learning algorithms use immense amounts of data, a luxury that these robots cannot afford, as large data sets must first be collected on different planets. These rovers will need to learn quickly and accurately upon deployment. Hans is utilizing the fact that not every piece of data that is given to the algorithm to learn on has the same amount of useful information. Hans is using an active learning algorithm with a Least-Confidence sampling strategy. To understand how this works it is helpful to have a general understanding of how some of these algorithms learn. Say we have an algorithm that we are trying to teach to identify handwritten numbers from 0–9. We will feed the algorithm a photo of a handwritten "2" for instance, and have the algorithm guess what number the photo represents. The algorithm will say "My guess is '3' but I am only 20% confident". Then you tell the machine, "no that is actually a '2', sorry". After doing this for a while the machine will see a handwritten "2" and be able to say, "that is a '2' and I am 98% confident". After feeding the algorithm more and more examples the machine gets better and better at identifying all the handwritten numbers from 0–9. However this can take immense amounts of data, which is sometimes not available or is increasingly expensive. One strategy that is used to help cut down on the required amount of data to accurately train algorithms is the Least-Confident sampling strategy. In our scenario we ask how useful it is to keep feeding an algorithm the high confidence data points (our handwritten numbers). The algorithm is not learning new information that way. Instead, we want to keep feeding the algorithm data points that the algorithm is less sure about. The assumption being made here is that not all data points have the same amount of useful information. By identifying the data points that the algorithm is less confident on we are able to identify what data points have more useful information. The idea is that we can use just those data points and thus cut down on the amount of data needed to accurately train an algorithm. This is great for cases like rovers where data is limited or other applications where it is not viable to have a lot of training data available. Logistically, there is not a lot of training data available to train on for algorithms made to help rovers autonomously rove on other planetary bodies like the Moon or Mars. The algorithm/robot will have to quickly learn from small amounts of data and real time experience.</p>
+
+        <p>Hans is early in his PhD journey but he does have his model coded already and his first paper published. He is hoping to make the transition from theoretical to application by running his code for a real rover by the end of his PhD. Hans didn't originally intend to do a PhD, but he enjoyed the work he was doing and the opportunities he had to continue on in academia. "I enjoyed the work, the people, the lab, the projects, and the work environment." he states. "I like the people I work with and learn from, and for me that is more important than working on a specific project." In the future he sees himself going into industry after getting his PhD. One thing he loves about what he does is the extensive opportunities for the application of his work. Even now his journey shows the diversity of fields that this kind of work can apply to, space and planetary exploration being only one of them. Space is a different set of constraints and problems than the medical field, and his next project will be different still.</p>
+
+        <p>For other people interested in rovers and or machine learning Hans points out some advantages of being in Hawaii at UH. "There are good analogs for rover environments on the Big Island and UH has good classes and knowledgeable people to work with". For the engineers, there is a training program he participates in through the National Science Foundation that teaches engineers how to use machine learning to solve some of Hawaii's most pressing problems, such as food security, energy supply and transportation.</p>
+
+        <p>Surprisingly, the transition from Germany to Hawaii was a smooth one, crediting finding good friends as one reason it took only a few months to get settled. "Hawaii is interesting because you have American culture and you have Hawaiian culture. And while I had done a lot of traveling previously, I didn't really know much about either of these places." Hans has found lots of reasons to like it here, and the year round hiking, surfing and scuba diving doesn't hurt either.</p>
+
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>

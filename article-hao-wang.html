@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hao Wang's Journey from Ocean to Space — Nina Shuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            terra:   '#793812',
+            sage:    '#6096f5',
+            sky:     '#4070c5',
+            cream:   '#f7f5f0',
+            heading: '#1a1a1a',
+            prose:   '#4a4a4a',
+            muted:   '#717171',
+            faint:   '#9e9e9e',
+            rule:    '#e2ddd8',
+            surface: '#edeae4',
+            dark:    '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .sidebar-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .nav-dot { transition: transform 0.2s, opacity 0.2s; }
+    .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
+    .nav-link.active .nav-dot { opacity: 1; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-prose flex min-h-screen">
+
+  <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
+    <div class="px-8 pt-10 pb-7 border-b border-rule">
+      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+        Nina<br>Shuping
+      </a>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
+    </div>
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
+      <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
+        About
+      </a>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
+        Photography
+      </a>
+      <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
+        Writing
+      </a>
+    </nav>
+    <div class="px-8 py-7 border-t border-rule space-y-1">
+      <a href="mailto:knshuping@gmail.com" class="text-[11px] text-muted hover:text-neutral-200 transition block font-display tracking-wide">knshuping@gmail.com</a>
+      <div class="flex gap-3 pt-1">
+        <a href="https://www.linkedin.com/in/katrina-shuping" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">Scholar</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ml-56 flex-1">
+
+    <section class="px-16 pt-20 pb-10 border-b border-rule">
+      <a href="writing.html" class="text-xs font-display tracking-widest uppercase text-faint hover:text-prose transition-colors">← Writing</a>
+      <p class="text-[10px] font-display tracking-widest uppercase text-sky mt-6 mb-3">University of Hawaii Graduate Research</p>
+      <h1 class="font-display text-4xl font-extrabold text-heading leading-tight mb-4 max-w-2xl">
+        Hao Wang's Journey from Ocean to Space
+      </h1>
+      <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
+    </section>
+
+    <article class="px-16 py-14 max-w-3xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+
+        <p>In 1999 China successfully launched the Shenzhou 1, an uncrewed spacecraft designed for human spaceflight. At the time Hao Wang, who is from Qingdao in China, was only about 8 years old. Upon hearing the news of the launch Dr. Wang remembers trying to draw a picture of the spacecraft but "it looked more like a UFO than a spacecraft" she says. From then on she found herself curious about "why spacecraft are that shape, and what they actually look like". Following that interest led Dr. Wang into a career in astronautics and planetology. She now works as a postdoctoral researcher for the Robotics and Space Exploration Lab (RoSE Lab) out of the University of Hawaii. At the time Dr. Wang was choosing where to study after high school, China did not have as many well developed aerospace programs. This led Dr. Wang to Purdue University because of their strong aerospace program.</p>
+
+        <p>After completing her bachelor's degree she went on to work on air traffic control research for her masters. Her work was on the implementation of GPS systems in aircraft and assessing the advantages of the GPS system over the current radar system. She states that at the time "that idea was controversial, using GPS was thought to create a security risk, but after the disappearance of MH370, people began accepting the idea of GPS systems". Now the use of GPS systems by air traffic control is widespread. However, throughout her work on her masters she realized that she was far more interested in space and wanted to get back into work with astronautical engineering. She describes feeling fascinated by the idea that "space is everything, and there is nothing outside of it. Space transportation and aerospace engineering helps us get to those places to learn more about it".</p>
+
+        <p>Dr. Wang moved to Florida to get her Ph.D. in aerospace engineering at University of Central Florida. "I was surprised to find that it was only an hour drive from Kennedy Space Center!" she says. During her time at UCF she was researching applications of machine learning in spacecraft controllers. Currently, machine learning isn't widely accepted in space missions and Dr. Wang says this is mostly due to two reasons. The first being "very high standards for safety, if a machine learning program is accurate 98% of the time, that is fine for most things but not good enough for spacecraft". Dr. Wang sees advances in machine learning technology happening rapidly, "at a much faster pace than aerospace engineering, in many ways aerospace engineering hasn't changed much from 10 years ago. It is very old in comparison". Space programs are developed slowly and carefully so we haven't seen much machine learning technology in these missions. "I want to start working on implementing machine learning into spacecraft now so that when technology advances enough to where using it is safe, we have already worked on how it can be implemented", she states.</p>
+
+        <p>Despite her research in machine learning she ended up doing her dissertation on the electrostatic effects of lunar dust. Dr. Wang's work focused on how the dust reacted to human interference, such as a spacecraft landing on the surface. We still don't fully understand all of the electrostatic effects of the dust, an issue that concerns space scientists because of the dust's adhesion and cohesion properties. The dust sticks to things which can harm equipment and human health. This is a problem that has to be reckoned with when designing space suits and lunar machinery. The work with lunar dust made Dr. Wang realize that she was also really interested in planetology. While both are related to space science, she has been on the engineering side of things far more than the physics and astronomy side, because of her background in engineering. "Aerospace engineering and planetary science are often not even in the same college" she says. Upon completion of her Ph.D, Dr. Wang was looking for opportunities to continue her research. For her, Hawaii was appealing for many reasons including diversity in culture, proximity to the ocean, and the opportunity to work in a lab that combines both engineering and planetary science. The Robotic Space Exploration (RoSE) Lab works under the Hawaii Institute of Geophysics and Planetology (HIGP), one of the few places aerospace engineering and planetology are studied under the same college. "It is rare to find that, and rare to find people with backgrounds in both aerospace engineering and planetology because they are often taught in different colleges". Dr. Wang says that "planetology and aerospace engineering have different work styles and different logic, I want to work to bridge the two". While the RoSE lab is mostly engineers, she says that the lab is the "perfect place to learn and do more planetary science". Dr. Wang started her position as a postdoctoral researcher about a year ago and has also taken on a management role within the lab. So far she says that the move to Hawaii has been great. She loves living near the water, saying that she has "a deep connection to the ocean because I grew up in a coastal town", and that the diversity in Hawaii makes her feel more accepted than some of the other places she has lived.</p>
+
+        <p>The plan for now is to stay here, she wants to stay in academia for as long as possible and hopes to obtain a faculty position. Dr. Wang's curiosity and drive for continued learning is palpable and enough to get anyone excited about her work. She tells us that she loves the opportunity to continue with her work where she feels "calm and comfortable". Right now a large part of her work, and her lab's work, is on autonomous rover operations. Here Hawaii has another large advantage, the closest analog to lunar terrain. Lava fields on the Big Island of Hawaii will help the team better understand the interaction between the rover and the surface of the moon. Also excited by research in astrophysics and machine learning, it seems as if she will never run out of things to study and things to learn. When asked what some of her largest challenges were over the course of her academic journey she says "picking just one thing to study, I have broad interests and always want to explore lots of different topics".</p>
+
+        <p>Dr. Wang's advice for undergrad students continuing their education is threefold. Study something you are intrinsically curious about, study different topics, and read, a lot. "Your interest in a topic and motivation is what will keep you going during challenges, study things you are interested in […] read papers on topics you think you like, lots of reading is helpful in finding a real interest".</p>
+
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>

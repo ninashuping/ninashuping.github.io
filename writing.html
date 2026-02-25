@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing — Nina Shuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            // Brand accents
+            terra:   '#793812',
+            sage:    '#6096f5',
+            sky:     '#4070c5',
+            // Backgrounds
+            cream:   '#f7f5f0',
+            // Text
+            heading: '#1a1a1a',
+            prose:   '#4a4a4a',
+            muted:   '#717171',
+            faint:   '#9e9e9e',
+            // Surfaces & borders
+            rule:    '#e2ddd8',
+            surface: '#edeae4',
+            dark:    '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .sidebar-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .nav-dot { transition: transform 0.2s, opacity 0.2s; }
+    .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
+    .nav-link.active .nav-dot { opacity: 1; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-prose flex min-h-screen">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
+
+    <div class="px-8 pt-10 pb-7 border-b border-rule">
+      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+        Nina<br>Shuping
+      </a>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
+    </div>
+
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
+      <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
+        About
+      </a>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
+        Photography
+      </a>
+      <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
+        Writing
+      </a>
+    </nav>
+
+    <div class="px-8 py-7 border-t border-rule space-y-1">
+      <a href="mailto:knshuping@gmail.com" class="text-[11px] text-muted hover:text-neutral-200 transition block font-display tracking-wide">
+        knshuping@gmail.com
+      </a>
+      <div class="flex gap-3 pt-1">
+        <a href="https://www.linkedin.com/in/katrina-shuping" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">Scholar</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main class="ml-56 flex-1">
+
+    <!-- Header -->
+    <section class="px-16 pt-20 pb-12 border-b border-rule">
+      <p class="font-display text-sky text-xs tracking-[0.25em] uppercase mb-4">Words</p>
+      <h1 class="font-display text-5xl font-extrabold text-heading leading-none mb-6">Writing</h1>
+      <p class="text-prose max-w-lg leading-relaxed">
+        Science communication, urban research, and feature writing. I write to make complex ideas accessible — and to connect people to the research that shapes their lives.
+      </p>
+    </section>
+
+    <!-- Science Communication Articles -->
+    <section class="px-16 py-14 border-b border-rule">
+      <div class="flex items-baseline gap-4 mb-8">
+        <h2 class="font-serif text-xl italic text-heading">Science Communication</h2>
+        <span class="text-[10px] font-display tracking-widest uppercase text-sky border border-sky/30 px-2 py-0.5 rounded-full">Feature Articles</span>
+      </div>
+
+      <div class="space-y-10 max-w-2xl">
+
+        <article class="group">
+          <a href="article-crater-clues.html" class="flex items-start gap-4 hover:opacity-75 transition-opacity">
+            <div class="w-1 h-full bg-sky/30 rounded-full flex-shrink-0 mt-1.5 self-stretch min-h-[1rem]"></div>
+            <div>
+              <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-2">University of Hawaii Graduate Research</p>
+              <h3 class="font-serif text-lg text-heading mb-2 leading-snug">
+                Crater Clues: Charting the Moon's History with Marley Chertok
+              </h3>
+              <p class="text-sm text-muted leading-relaxed">
+                A profile of doctoral student Marley Chertok's research on impact craters — how they reveal subsurface information and what that tells us about the composition of the Moon and other icy celestial bodies.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="article-ai-astronomy.html" class="flex items-start gap-4 hover:opacity-75 transition-opacity">
+            <div class="w-1 h-full bg-sky/30 rounded-full flex-shrink-0 mt-1.5 self-stretch min-h-[1rem]"></div>
+            <div>
+              <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-2">University of Hawaii Graduate Research</p>
+              <h3 class="font-serif text-lg text-heading mb-2 leading-snug">
+                AI Meets Astronomy: Linnea Wolniewicz's Exploration of Machine Learning in Scientific Research
+              </h3>
+              <p class="text-sm text-muted leading-relaxed">
+                Wolniewicz develops Fourier Neural Operators to improve astronomical data processing, incorporating scientific domain knowledge into AI models while handling irregularly-sampled data and leading student outreach through Graduate Women in Science Hawaii.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="article-sound-of-safety.html" class="flex items-start gap-4 hover:opacity-75 transition-opacity">
+            <div class="w-1 h-full bg-sky/30 rounded-full flex-shrink-0 mt-1.5 self-stretch min-h-[1rem]"></div>
+            <div>
+              <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-2">University of Hawaii Graduate Research</p>
+              <h3 class="font-serif text-lg text-heading mb-2 leading-snug">
+                The Sound of Safety: Kei Takazawa's Innovations in Infrasound
+              </h3>
+              <p class="text-sm text-muted leading-relaxed">
+                Takazawa develops smartphone sensor technology for detecting explosions via infrasound monitoring — a tool supporting nuclear non-proliferation efforts, combining seismic and acoustic analysis with machine learning.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="article-hans-mertens.html" class="flex items-start gap-4 hover:opacity-75 transition-opacity">
+            <div class="w-1 h-full bg-sky/30 rounded-full flex-shrink-0 mt-1.5 self-stretch min-h-[1rem]"></div>
+            <div>
+              <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-2">University of Hawaii Graduate Research</p>
+              <h3 class="font-serif text-lg text-heading mb-2 leading-snug">
+                Transforming Rover Engineering with Least Confident Sampling Strategy with Hans Mertens
+              </h3>
+              <p class="text-sm text-muted leading-relaxed">
+                Mertens applies active learning and Least-Confidence sampling to train autonomous rover navigation algorithms on small datasets — bridging work in medical robotics, automotive engineering, and planetary exploration.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="article-prajna-jandial.html" class="flex items-start gap-4 hover:opacity-75 transition-opacity">
+            <div class="w-1 h-full bg-sky/30 rounded-full flex-shrink-0 mt-1.5 self-stretch min-h-[1rem]"></div>
+            <div>
+              <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-2">University of Hawaii Graduate Research</p>
+              <h3 class="font-serif text-lg text-heading mb-2 leading-snug">
+                From Numbers to Nautical Research: Prajna's Algorithm for Ocean Discovery
+              </h3>
+              <p class="text-sm text-muted leading-relaxed">
+                Jandial develops an adaptive survey algorithm for underwater robots to capture unique acoustic signatures across ocean environments — from whale pods to hydrothermal vents — using sound pressure as a guide for autonomous exploration.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="article-hao-wang.html" class="flex items-start gap-4 hover:opacity-75 transition-opacity">
+            <div class="w-1 h-full bg-sky/30 rounded-full flex-shrink-0 mt-1.5 self-stretch min-h-[1rem]"></div>
+            <div>
+              <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-2">University of Hawaii Graduate Research</p>
+              <h3 class="font-serif text-lg text-heading mb-2 leading-snug">
+                Hao Wang's Journey from Ocean to Space
+              </h3>
+              <p class="text-sm text-muted leading-relaxed">
+                From childhood drawings of the Shenzhou spacecraft to postdoctoral research at UH's RoSE Lab, Dr. Wang bridges aerospace engineering and planetary science — working on autonomous rover operations and the electrostatic properties of lunar dust.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="article-alaine-lee.html" class="flex items-start gap-4 hover:opacity-75 transition-opacity">
+            <div class="w-1 h-full bg-sky/30 rounded-full flex-shrink-0 mt-1.5 self-stretch min-h-[1rem]"></div>
+            <div>
+              <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-2">University of Hawaii Graduate Research</p>
+              <h3 class="font-serif text-lg text-heading mb-2 leading-snug">
+                Aláine Lee: Astronaut to Be
+              </h3>
+              <p class="text-sm text-muted leading-relaxed">
+                From white-tailed eagle research at 14 to crossing the Pacific twice, Lee brings a remarkable range of field experience to UH's astrophysics program — pursuing Pan-STARRS contamination research, PORIS instrument testing, and her long-term goal of becoming a NASA astronaut.
+              </p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Urban Research Publications -->
+    <section class="px-16 py-14 border-b border-rule">
+      <div class="flex items-baseline gap-4 mb-8">
+        <h2 class="font-serif text-xl italic text-heading">Urban Research</h2>
+        <span class="text-[10px] font-display tracking-widest uppercase text-terra border border-terra/30 px-2 py-0.5 rounded-full">Published Work</span>
+      </div>
+
+      <div class="space-y-6 max-w-2xl">
+
+        <article class="flex items-start gap-4">
+          <div class="w-1 self-stretch min-h-[1rem] bg-terra/30 rounded-full flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h3 class="font-display font-semibold text-sm text-heading tracking-wide mb-1 leading-snug">
+              Contesting the right to the city under scarcity: the case of Micronesians in Hawaii's Public Housing
+            </h3>
+            <p class="text-xs text-faint font-display tracking-wide">
+              Rita, Nathalie, et al. · <em>Housing and Society</em> 47, no. 3 (2020): 165–188
+            </p>
+          </div>
+        </article>
+
+        <article class="flex items-start gap-4">
+          <div class="w-1 self-stretch min-h-[1rem] bg-terra/30 rounded-full flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h3 class="font-display font-semibold text-sm text-heading tracking-wide mb-1 leading-snug">
+              Report Summarizing Recommendations for an Affordable Housing Funding Strategy
+            </h3>
+            <p class="text-xs text-faint font-display tracking-wide">
+              Engel, Rachel, et al. · 2021
+            </p>
+          </div>
+        </article>
+
+        <article class="flex items-start gap-4">
+          <div class="w-1 self-stretch min-h-[1rem] bg-terra/30 rounded-full flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h3 class="font-display font-semibold text-sm text-heading tracking-wide mb-1 leading-snug">
+              Analysis of Impediments to Fair Housing: Phase 1 Report
+            </h3>
+            <p class="text-xs text-faint font-display tracking-wide">
+              Garboden, Philip · University of Hawaii at Manoa, 2020
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Urban Safety Research -->
+    <section class="px-16 py-14">
+      <div class="flex items-baseline gap-4 mb-8">
+        <h2 class="font-serif text-xl italic text-heading">Urban Safety Research</h2>
+        <span class="text-[10px] font-display tracking-widest uppercase text-sage border border-sage/30 px-2 py-0.5 rounded-full">Portfolio</span>
+      </div>
+
+      <div class="max-w-2xl">
+        <p class="text-prose leading-relaxed mb-8">
+          A multi-part research portfolio exploring the relationship between physical infrastructure, public space design, and urban safety. Studies Amsterdam, Copenhagen, Milan, and Rome — building a toolbox of design components that architects and planners can use to improve safety through good design.
+        </p>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+            <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">01</p>
+            <p class="text-sm font-display font-semibold text-white tracking-wide">Literature Review</p>
+            <p class="text-xs text-muted mt-1">Ecological theories in urban safety</p>
+          </div>
+          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+            <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">02</p>
+            <p class="text-sm font-display font-semibold text-white tracking-wide">Conference Poster</p>
+            <p class="text-xs text-muted mt-1">NCUR 2021 — Exploring Theories of Neighborhood Safety</p>
+          </div>
+          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+            <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">03</p>
+            <p class="text-sm font-display font-semibold text-white tracking-wide">Research Paper</p>
+            <p class="text-xs text-muted mt-1">Amsterdam, Copenhagen, Milan, Rome study</p>
+          </div>
+          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+            <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">04</p>
+            <p class="text-sm font-display font-semibold text-white tracking-wide">Photo Library</p>
+            <p class="text-xs text-muted mt-1">Safe sites documentation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

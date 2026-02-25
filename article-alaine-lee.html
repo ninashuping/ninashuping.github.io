@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aláine Lee: Astronaut to Be — Nina Shuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            terra:   '#793812',
+            sage:    '#6096f5',
+            sky:     '#4070c5',
+            cream:   '#f7f5f0',
+            heading: '#1a1a1a',
+            prose:   '#4a4a4a',
+            muted:   '#717171',
+            faint:   '#9e9e9e',
+            rule:    '#e2ddd8',
+            surface: '#edeae4',
+            dark:    '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .sidebar-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .nav-dot { transition: transform 0.2s, opacity 0.2s; }
+    .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
+    .nav-link.active .nav-dot { opacity: 1; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-prose flex min-h-screen">
+
+  <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
+    <div class="px-8 pt-10 pb-7 border-b border-rule">
+      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+        Nina<br>Shuping
+      </a>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
+    </div>
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
+      <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
+        About
+      </a>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
+        Photography
+      </a>
+      <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
+        Writing
+      </a>
+    </nav>
+    <div class="px-8 py-7 border-t border-rule space-y-1">
+      <a href="mailto:knshuping@gmail.com" class="text-[11px] text-muted hover:text-neutral-200 transition block font-display tracking-wide">knshuping@gmail.com</a>
+      <div class="flex gap-3 pt-1">
+        <a href="https://www.linkedin.com/in/katrina-shuping" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">Scholar</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ml-56 flex-1">
+
+    <section class="px-16 pt-20 pb-10 border-b border-rule">
+      <a href="writing.html" class="text-xs font-display tracking-widest uppercase text-faint hover:text-prose transition-colors">← Writing</a>
+      <p class="text-[10px] font-display tracking-widest uppercase text-sky mt-6 mb-3">University of Hawaii Graduate Research</p>
+      <h1 class="font-display text-4xl font-extrabold text-heading leading-tight mb-4 max-w-2xl">
+        Aláine Lee: Astronaut to Be
+      </h1>
+      <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
+    </section>
+
+    <article class="px-16 py-14 max-w-3xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+
+        <p>Aláine Lee has found herself at UH Manoa getting a bachelor's degree in Astrophysics but has crossed the pacific ocean on boats twice, been involved with research since 14 years old, and has even been a gamekeeper in New Zealand. Aláine's non traditional path towards her degree involved diverse experiences such as white tailed eagle research at 14, working with the BBC, a crossing of the pacific on an untested high performance power boat, research on deep sea octopuses, and becoming first mate on a sailboat on yet another crossing of the pacific. However her experience is also a testament to where curiosity and tenacity can take you. For Aláine, this means space. For some the jump from conservation and ecology to space science research is quite the leap. However Aláine speaks of her work on animals in extreme and remote environments as the experiences that "planted the seed" for wanting to work in space, the most remote and extreme of environments. Aláine remembers a moment when she was on a boat looking up at the stars and realizing that she wanted to be an astronaut. For other astronomers this moment is familiar, there is an immense pull and beauty in looking at the stars that often invokes a longing for something that is so far away and unknown. Her knack for systems engineering and experience performing in intense and complicated environments, gives her the confidence to take on the immense challenges that are required by astronauts. She describes this leap as an intuitive one, she knew that this is how she could get her questions about the universe answered.</p>
+
+        <p>As a result Aláine gets busy making the dream of being an astronaut come true, starting with getting a degree in Astrophysics. With her already long resume of research work behind her, she is able to get involved with multiple research projects quickly. Currently she is focusing on three active projects, contamination effects on Pan-STARRS imaging, testing the PORIS hyper spectral imaging device, and research developing the extragalactic science case for high spatial resolution in the far infrared.</p>
+
+        <p>Up on the summit of Haleakalā, the Pan-STARRS project is University of Hawaii's largest single research project with a purpose to detect Near Earth Objects (NEOs). These NEOs are reported to a global database and are evaluated to see if they are a threat to earth. The telescopes used in the project use digital cameras to image and track NEOs, however with an increasing amount of artificial objects in space like satellites and pieces of broken satellites and other space junk, there are more contamination effects on these images. These contamination effects show up as streaks similar to the streaks created by NEOs moving across the sky, making it more difficult to determine if something is a satellite/space junk, or if it is a NEO. Aláine is working to create a census of how many of these contamination effects there are and establish general trends like approximate contaminate rates and even orbital altitude. With an increasing number of satellites in orbit and the telescope's ability to pick up on objects as small as 10 cm in size, there is the potential that measures will need to be taken to compensate for these effects. Her census is to determine the number of contamination effects per night and serve as a starting point for future work in establishing how big of an issue artificial objects in orbit are causing for telescope imaging.</p>
+
+        <p>Under the guidance of Paul Lucey, Aláine is working on the development and testing of a small, lightweight, thermal and hyper spectral imaging instrument called PORIS. PORIS is able to collect information on the composition of materials using spectral features as well as thermal imaging. Due to the small and lightweight nature of the device, and the real time results, PORIS has the capability to work in orbit or as a handheld device used by astronauts. For projects with quick timelines, this can be an immense timesaver as data does not need to be transferred back down to earth then results sent back up. Another thing that needs to be considered when developing technology used by astronauts, is that the kind of environment they are working in needs to be considered. This includes making sure the device can be operated with space suits on and simple enough to operate even when there is an immense cognitive load on the person operating the device. Tests done in analog environments are important for people who are wanting to be astronauts but are also important environments to test different technology. Aláine's driven nature and maturity was highlighted when she said that she applied to be an analog astronaut to test the habitability of lava tubes. Her reasoning for applying was that she understood that the process of becoming an astronaut includes a lot of rejection, and she wanted to be able to prove to herself that she can grow from these rejection experiences. As a welcome surprise she made it past the first interview series which she described as an "accomplishment in itself", and later was selected as backup commander for the analog mission. Through an internal call for applications for projects to test, the PORIS device was chosen as one of the test instruments and as a result was able to go through additional testing to assess readiness for use in the field.</p>
+
+        <p>While these projects keep her busy enough, Aláine continues to nurture her curiosities of some of the universe's strangest phenomena, black holes. Every 10 years NASA publishes a list of science objectives that NASA missions will be centered around. Most recently, one of these objectives is more research in the far infrared portion of the electromagnetic spectrum using a probe called SPICE. SPICE is able to take data in the 25–400 micron range of the electromagnetic spectrum, and as it turns out the instrument is great for objects that are particularly redshifted, meaning further away. Objects in the active galactic nucleus (AGN), a region of a galaxy in the center that surrounds a black hole, emits energy in the high end of the electromagnetic spectrum including the far infrared, and x-ray spectrum. SPICE is able to image this region to give us higher quality spatial and spectral resolutions of these areas. At our current resolution we often cannot tell if one bright area of light is one or two objects. In turn we will be able to better understand the workings of some of the most interesting phenomena in the universe.</p>
+
+        <p>However, even if you take nothing else from Aláine's story, you should leave knowing that the ability to just be able to focus on your work and your research is quite the privilege in itself. In a field dominated by men, Aláine has had to carry the mental load of not only her classes and research but also deal with harassment from peers. Aláine speaks of the frustration of being judged for having a lot on her plate, mentally and logistically, specifically by those who continue to uphold spaces where that kind of treatment is tolerated. It is from her experience in this field that motivates her to be an astronaut, and to be an astrophysicist. She wants to succeed so she can be the representation for other women and girls. She knows just how important representation is because she too looks up to other women in her field. However the future is bright. Her motivation to work at NASA is in part because of the inclusive and refreshing environment that they have been able to cultivate. When asked what specifically she feels NASA is doing to create this environment, she responds by pointing out how they have diverse collaboration teams that are not male dominated. She says "You walk down the halls there [NASA research sites] and it's obvious. There are women hanging up on the walls who have massive accomplishments." This interdisciplinary and collaborative space is a huge motivator and serves as a beacon of light as she navigates experiences that are less than ideal.</p>
+
+        <p>Her own experiences show just how important it is to, as a science community, support non traditional students and backgrounds. She stresses how her community has been integral in her success as a student that has had to provide for herself and put herself through school. "Support women" she states, and she is right, the science community does need to do more to support students that are marginalized. Aláine's calm confidence in herself and her abilities is apparent and she trusts her intuition to take her in the direction she needs to go, which so far is another step closer to space.</p>
+
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>

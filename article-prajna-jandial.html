@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Numbers to Nautical Research — Nina Shuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            terra:   '#793812',
+            sage:    '#6096f5',
+            sky:     '#4070c5',
+            cream:   '#f7f5f0',
+            heading: '#1a1a1a',
+            prose:   '#4a4a4a',
+            muted:   '#717171',
+            faint:   '#9e9e9e',
+            rule:    '#e2ddd8',
+            surface: '#edeae4',
+            dark:    '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .sidebar-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .nav-dot { transition: transform 0.2s, opacity 0.2s; }
+    .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
+    .nav-link.active .nav-dot { opacity: 1; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-prose flex min-h-screen">
+
+  <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
+    <div class="px-8 pt-10 pb-7 border-b border-rule">
+      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+        Nina<br>Shuping
+      </a>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
+    </div>
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
+      <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
+        About
+      </a>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
+        Photography
+      </a>
+      <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
+        Writing
+      </a>
+    </nav>
+    <div class="px-8 py-7 border-t border-rule space-y-1">
+      <a href="mailto:knshuping@gmail.com" class="text-[11px] text-muted hover:text-neutral-200 transition block font-display tracking-wide">knshuping@gmail.com</a>
+      <div class="flex gap-3 pt-1">
+        <a href="https://www.linkedin.com/in/katrina-shuping" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">Scholar</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ml-56 flex-1">
+
+    <section class="px-16 pt-20 pb-10 border-b border-rule">
+      <a href="writing.html" class="text-xs font-display tracking-widest uppercase text-faint hover:text-prose transition-colors">← Writing</a>
+      <p class="text-[10px] font-display tracking-widest uppercase text-sky mt-6 mb-3">University of Hawaii Graduate Research</p>
+      <h1 class="font-display text-4xl font-extrabold text-heading leading-tight mb-4 max-w-2xl">
+        From Numbers to Nautical Research: Prajna's Algorithm for Ocean Discovery
+      </h1>
+      <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
+    </section>
+
+    <article class="px-16 py-14 max-w-3xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+
+        <p>During her undergraduate years, Prajna Jandial took the opportunity to engage in machine learning and marine biology through an internship in Massachusetts, marking a pivotal moment that ignited her passion for ocean exploration. During this internship at Woods Hole Oceanographic Institution (WHOI), she applied machine learning techniques to characterize animal behavior, focusing on understanding how squid respond to noise and its impact on the movement of a shoal. With a background in Electrical and Electronics Engineering from her bachelor's degree in India, Prajna has transitioned to Ocean and Resources Engineering in her pursuit of ocean-related endeavors. The allure of UH for Prajna lies in its flexibility and the unique opportunity to delve into oceanography at the master's level, a rare offering in many academic institutions. While Prajna has had diverse experiences in research such as developing an underwater robot, and working in virtual reality and machine learning, it was the 6 months spent in Massachusetts at WHOI that solidified her desire to work in the marine environment.</p>
+
+        <p>Since being a kid she has had a connection to the ocean and the outdoors. For Prajna she remembers spending a lot of time watching documentaries with her dad, and also remembers liking how the people on the show got to "go to all these cool environments and see all this cool wildlife". Where many people would dive into marine biology or other related fields Prajna asserts that she loves being able to engage in the "tech side of things, and talk in numbers". "I am not the smartest person in the room but I like numbers" she states. Her research now centers around developing an algorithm for underwater robots to explore and capture the myriad sound signatures in designated areas.</p>
+
+        <p>Prajna's algorithm is a survey tool to capture all of the different sound signatures of a designated area underwater, aiming to revolutionize underwater sampling methods. Unlike static methods that follow predetermined paths, Prajna's adaptive survey assessment algorithm responds to unique sound signatures, identifying areas of interest for further investigation. The goal is to create a comprehensive method that can capture diverse sounds in a given area, enabling applications such as tracking marine life and monitoring protected areas. She notes that different noises underwater including animals and boats have unique sound signatures, including features like hydrothermal vents. "Ocean and sounds are so related but we don't really realize this" she states. The goal is to develop a method that can collect all the unique sounds in a given area or "follow a pod of whales, or find hydrothermal vents on the seafloor". Currently the decision making process of her algorithm uses sound pressure waves to identify areas of interest, similar to volume. Using this as a point of interest the robot can then go and investigate the sounds in that direction.</p>
+
+        <p>Another interesting aspect of Prajna's work is how she has to develop code for shallow water and deep water. Since sound is a wave, there are different acoustic effects that change how sound is reflected on the surface and bottom of the ocean. Researchers in marine acoustics, and fields that use waves of any kind, have to take into account the different effects of shallow vs deep water but also the turbulence of the water as well since these all change how waves move in the ocean medium.</p>
+
+        <p>One thing she finds special about her experience is the opportunity to work with two female PIs. Being in Engineering and not having an opportunity to work with an all female team before, she says she really appreciates "the feminine perspective, it gives me the comfort to be insane and to try insane things". She continues "There is comfort in an all female team that provides strategies for burnout and emphasizes the importance of mental health."</p>
+
+        <p>Looking ahead, Prajna remains open to diverse opportunities. Upon completing her algorithm, potential paths include pursuing a Ph.D. or collaborating with a team willing to implement her algorithm on an underwater robot. When asked for advice to undergraduate students, she encourages them with a familiar yet elegant phrase: "Don't self reject." Prajna emphasizes the significance of reaching out to professors and taking chances, highlighting that the worst outcome is a non-response to an email inquiry.</p>
+
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>

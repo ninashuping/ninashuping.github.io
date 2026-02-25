@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crater Clues — Nina Shuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            // Brand accents
+            terra:   '#793812',
+            sage:    '#6096f5',
+            sky:     '#4070c5',
+            // Backgrounds
+            cream:   '#f7f5f0',
+            // Text
+            heading: '#1a1a1a',
+            prose:   '#4a4a4a',
+            muted:   '#717171',
+            faint:   '#9e9e9e',
+            // Surfaces & borders
+            rule:    '#e2ddd8',
+            surface: '#edeae4',
+            dark:    '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .sidebar-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .nav-dot { transition: transform 0.2s, opacity 0.2s; }
+    .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
+    .nav-link.active .nav-dot { opacity: 1; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-prose flex min-h-screen">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
+    <div class="px-8 pt-10 pb-7 border-b border-rule">
+      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+        Nina<br>Shuping
+      </a>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
+    </div>
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
+      <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
+        About
+      </a>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
+        Photography
+      </a>
+      <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
+        Writing
+      </a>
+    </nav>
+    <div class="px-8 py-7 border-t border-rule space-y-1">
+      <a href="mailto:knshuping@gmail.com" class="text-[11px] text-muted hover:text-neutral-200 transition block font-display tracking-wide">knshuping@gmail.com</a>
+      <div class="flex gap-3 pt-1">
+        <a href="https://www.linkedin.com/in/katrina-shuping" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">Scholar</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main class="ml-56 flex-1">
+
+    <section class="px-16 pt-20 pb-10 border-b border-rule">
+      <a href="writing.html" class="text-xs font-display tracking-widest uppercase text-faint hover:text-prose transition-colors">← Writing</a>
+      <p class="text-[10px] font-display tracking-widest uppercase text-sky mt-6 mb-3">University of Hawaii Graduate Research</p>
+      <h1 class="font-display text-4xl font-extrabold text-heading leading-tight mb-4 max-w-2xl">
+        Crater Clues: Charting the Moon's History with Marley Chertok
+      </h1>
+      <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
+    </section>
+
+    <article class="px-16 py-14 max-w-3xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+
+        <p>For those wondering what lunar soil smells like, Marley Chertok will tell you that it smells like smoked meat in an old basement. This is one of the strange advantages of working in the world of planetary geology. Being able to be independent and focus on topics of interest to her while being homeschooled set Marley up for success in college studying geology. During her time in college at Temple University, she studied hydrology and worked for The Academy of Natural Sciences in Philadelphia doing water quality research, furthering her laboratory expertise. However, Marley describes the field camp she did mapping geologic units in Wyoming and South Dakota as the most impactful towards her passion for field work. "That experience contributed deeply to the geologist I am today," she states. When she was nominated for an internship with the U.S. Geological Survey (USGS), she had the opportunity to work on the identification of spectral properties of cyanobacteria in order to better predict harmful algal blooms. This first exposure and work with spectroscopy, which is the study of how different objects absorb and radiate light in the electromagnetic spectrum, opened the door to other interesting applications of the science for Marley.</p>
+
+        <p>Transitioning into a more spectroscopy role, Marley was part of a team observing land use changes, and environmental impacts of refugee settlements in Zambia. In this study the research team was comparing the land use change of two different settlements, one in a tropical climate and another in a dry climate. The science team determined how protracted refugee settlements affect the environment and made recommendations for how emergency settlements can be better planned with both environmental and human needs in mind. With more experience in remote sensing tools she got involved with the Astrogeology Science Center at USGS, where she worked studying the regolith on the Moon.</p>
+
+        <p>Marley is currently pursuing a doctoral degree in Earth and Planetary Science at the University of Hawaiʻi at Mānoa. Now immersed in research at UH in the Department of Earth Sciences, Marley's thesis studying impact craters on the Moon is coming together. "Then I started studying impact craters, I felt like I really understood it. It is a fun challenge and I love being able to contribute little pieces [of knowledge] of solar system processes. It feels empowering and helps build confidence, and I hope to apply this information to other planetary bodies as well." So far her thesis is going to be three parts with a central theme of using impact craters to probe the subsurface of the Moon to better understand what the Moon was once like.</p>
+
+        <p>Impact craters are a common tool used by planetary scientists to help date different areas of a terrestrial planet's surface. As a general trend, older surfaces will have more craters. This is because more time will have elapsed and there will have been a longer period for craters to impact that area. Additionally, our solar system was once more chaotic than it is now and surfaces that were exposed during that time will have more craters. However that rule of thumb is not always accurate — other factors are at play and other insights can be gained using clues from impact craters. While new evidence shows that the Moon might still be geologically active, we know that it was previously far more active because we are able to see the remnants of extensive lava flows that have covered old cratered surfaces. These are the large dark patches you can see when looking at the Moon and are called lunar maria. The light areas of the Moon are the heavily cratered areas called the highlands. Marley's research lies in understanding the nuances of the Moon's surface and challenging the idea that lava flows on the Moon are homogeneous. The Moon's lava flows may be more diverse than we expected.</p>
+
+        <p>In Marley's work, she is comparing craters in the highlands to craters in the mare using ejecta blankets and crater depth to understand the Moon's regolith — the top layer of unconsolidated material above the bedrock. When an impactor hits the lunar surface it excavates the regolith and throws rocks into the air, which land on the surrounding surface; this is called the ejecta blanket, and lots of rocks strewn about around the crater is an indicator of a thin regolith. When comparing impact craters in the lunar mare, there seems to be less rocky ejecta being produced. This is an indication of a few things. The first is that the rock of the lunar mare is different from the regolith of the older highland surface. The second is that the regolith of the lunar mare is thinner than on the highlands. Another consideration is that the rocks in the ejecta blanket on the mare are breaking down faster than in the highlands. "It is difficult to decouple these things," Marley states, "It is most likely that the answer is a combination of all of it." Since it is difficult to date individual craters, we often only have an order of events, not a dated timeline. This makes it increasingly difficult to determine at what point in the erosion process each rock, or ejecta blanket as a whole, is in. Not knowing this makes it difficult to make direct comparisons of craters of the same age. However, Marley is continuing to use clues to help better understand the geologic process of the Moon.</p>
+
+        <p>Marley hopes that her work will take her "figuratively to the Moon and beyond. I hope that by understanding the Moon we can better understand the planetary processes of other bodies. We can use craters to shed light on the subsurface of planets." She is also excited by how this kind of work changes when dealing with icy bodies. "Impact craters on ice will behave differently than rocky surfaces due to their composition and relative strength." Knowing that many terrestrial planets have icy surfaces, the future work in this area is vast. This is one of the things that she really enjoys about being part of HIGP — there are opportunities to "dabble in different areas of work." On 'dabbling,' Marley sees this as a key to success: "I want to dabble in everything and have dabbled in a lot of things," and suggests to other students that "It is good to try different fields. At UH it is not hard to get involved — you have to practice pursuing things and be eager and interested. I tried a bunch of things and I am glad I did!"</p>
+
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>

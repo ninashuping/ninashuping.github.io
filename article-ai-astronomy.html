@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Meets Astronomy — Nina Shuping</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            terra:   '#793812',
+            sage:    '#6096f5',
+            sky:     '#4070c5',
+            cream:   '#f7f5f0',
+            heading: '#1a1a1a',
+            prose:   '#4a4a4a',
+            muted:   '#717171',
+            faint:   '#9e9e9e',
+            rule:    '#e2ddd8',
+            surface: '#edeae4',
+            dark:    '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .sidebar-dots {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .nav-dot { transition: transform 0.2s, opacity 0.2s; }
+    .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
+    .nav-link.active .nav-dot { opacity: 1; }
+  </style>
+</head>
+<body class="bg-cream font-sans text-prose flex min-h-screen">
+
+  <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
+    <div class="px-8 pt-10 pb-7 border-b border-rule">
+      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+        Nina<br>Shuping
+      </a>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
+    </div>
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
+      <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
+        About
+      </a>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-neutral-400 hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
+        Photography
+      </a>
+      <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
+        Writing
+      </a>
+    </nav>
+    <div class="px-8 py-7 border-t border-rule space-y-1">
+      <a href="mailto:knshuping@gmail.com" class="text-[11px] text-muted hover:text-neutral-200 transition block font-display tracking-wide">knshuping@gmail.com</a>
+      <div class="flex gap-3 pt-1">
+        <a href="https://www.linkedin.com/in/katrina-shuping" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">LinkedIn</a>
+        <a href="https://scholar.google.com" target="_blank" class="text-[11px] text-muted hover:text-neutral-200 transition font-display tracking-wide">Scholar</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="ml-56 flex-1">
+
+    <section class="px-16 pt-20 pb-10 border-b border-rule">
+      <a href="writing.html" class="text-xs font-display tracking-widest uppercase text-faint hover:text-prose transition-colors">← Writing</a>
+      <p class="text-[10px] font-display tracking-widest uppercase text-sky mt-6 mb-3">University of Hawaii Graduate Research</p>
+      <h1 class="font-display text-4xl font-extrabold text-heading leading-tight mb-4 max-w-2xl">
+        AI Meets Astronomy: Linnea Wolniewicz's Exploration of Artificial Intelligence in Scientific Research
+      </h1>
+      <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
+    </section>
+
+    <article class="px-16 py-14 max-w-3xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+
+        <p>Nicknamed "The Barrier," the Ross ice shelf sits in an inlet of the Antarctic continent spanning over 500 thousand square kilometers. While there are many researchers who are interested in what Antarctica has to offer, the Ross ice shelf became an area of study when researchers noticed significant melting and the severing of large pieces of the ice shelf. This poses a real threat to sea level rise, and as a result, the monitoring and analysis of threats to the ice shelf have been ongoing. This was Linnea Wolniewicz's first exposure to using artificial intelligence (AI) for science to assess the threat of waves to the ice shelf's integrity. While using artificial intelligence for science is now Linnea's topic of interest for her Ph.D., she did not start out doing computer science or environmental work.</p>
+
+        <p>While Linnea was an astrophysics undergraduate student at the University of Colorado Boulder she studied abroad at the University of Edinburgh. As a harpist who had to leave her harp behind, she found that studying Scottish folk music was an impactful surprise during her time away and was even gifted a Celtic harp to play. As a classically trained harpist used to reading off of sheet music, the switch to playing folk music where everyone learns by ear was a fun one. "In folk music there is no sheet music or writing down of the songs," she states. "You attend a session where someone plays a piece aloud slowly and you pick up the tune and join in. I felt like I was in a movie. It was so amazing, we'd meet at a pub downtown every week and play for hours. The music was never ending because whenever one tune finished someone else would just start a new one, and if you knew it you'd join in. This was definitely a highlight of my study abroad." What seems like an odd pairing of interests might actually be the result of the kind of learning environment that Linnea grew up in, rather than chance. Growing up, Linnea's mom was a jeweler and her dad was a computer scientist. This environment helped develop and take advantage of both the artistic and engineer's mind. While she had always enjoyed math and physics, the sense of community she experienced with music remains a notable highlight.</p>
+
+        <p>Linnea knew that grad school was going to be in her future at some point, and to set herself up in undergrad she recognized the need to be part of research before graduating. "Even in high school I always wanted to do the highest achieving thing I could do school-wise, like taking the hardest classes. I think I wanted to be challenged and loved learning," she comments. The decision to go to grad school was a natural one and made a lot of sense for her. Like many professors dream of, her intro to astronomy professor Dr. Ben Brown's love for space and palpable desire for students to share in that curiosity left an impression on Linnea. This led her to get involved with Dr. Brown's research, and he was instrumental in helping her land a research opportunity at the Institute for Astronomy at the University of Hawaiʻi at Mānoa (UHM) over the summer studying the Kepler telescope, NASA's original exoplanet hunter. Unfortunately COVID pushed the research opportunity to the virtual environment and she wasn't able to have the experience she was necessarily looking for. Linnea had never been to Hawai'i and her desire to go played a part in her decision to eventually go to grad school at UHM. However, before going to college she had taken a Coursera class with her dad, brother, and two sisters that propelled her into the realm of computer science and AI applications. This laid the groundwork for her later research studying coronal holes with Dr. Benoît Tremblay and later work on using AI to better understand what poses a threat to the Ross ice shelf. One thing that drew Linnea to computer science was the versatility. "Computer science has both industry and academic applications, and I didn't want to close any doors," she states.</p>
+
+        <p>Now Linnea's work centers around using artificial intelligence for science and specifically around using Fourier Neural Operators as a way to improve the periodicity of astronomical data in the architecture of the machine learning model. For those outside this field, Linnea helped break down what this actually means, and how she works with AI to accelerate scientific discovery.</p>
+
+        <p>The first way Linnea and people like Linnea are trying to utilize AI for science is by incorporating what we know about the world into AI models. Currently AI models are fed a bunch of training data to help the program "learn" to classify inputs or generate predictions. Models have been very good at doing this, however the exact logic of the model used to determine the answer is not fully understood and not the way humans solved the same problem either. In the case of AI for science, a model may be able to accurately determine the mechanics of stellar rotation, for example, but it learns this without understanding the underlying mathematics and physics known by scientists. It is thought that large jumps in the accuracy and usefulness of AI for scientific research can be made by programming in what scientists know, as a starting place for these models to build upon. This is called using scientific domain knowledge to inform AI models. This would include things like common math equations used in physics. However this is quite the tall order. "How do you teach a computer to do something besides randomly?" Linnea asks.</p>
+
+        <p>Additionally, Linnea's research also includes preparing data for AI algorithms to learn on. AI models need clean data that is regularly spaced, however that is not the reality, especially in astronomical research. Often the data that is sampled is done irregularly and has long time gaps in between. Using a Fourier Neural Operator — a neural operator based on the Fourier transform — it can help fix irregularities, specifically in the time dimension. This means that now, data sampled at irregular time intervals can be used for training an AI model. Irregular time intervals are bad for these algorithms because they don't understand that the two points sampled beside each other may have different time in between. The model expects the time dimension to be constant and can't learn on this kind of data. This is why preparing data using a Fourier transform is so helpful — it allows the model to actually use the data.</p>
+
+        <p>Currently Linnea is using her AI model to classify patterns in a star's light curve. This can look like the model identifying whether a star is dimming over time, going supernova, or is really a binary star system. Another way she is applying AI to science is to accelerate Markov Chain Monte Carlo sampling with a neural network to identify the parameters that describe the transport of galactic cosmic rays through our solar system given satellite observations. Monte Carlo Sampling is a technique used when you have a bunch of data but you don't know the distribution. By sampling data with a Markov Chain, the Markov Chain Monte Carlo method can determine what the most likely parameters that describe the distribution of the data are. In Linnea's work she employs this method but with a slight twist — the samples are passed through a neural network to determine their likelihood and inclusion in the final set of distribution-describing parameters. While this was the first project Linnea took to a conference in graduate school, it is her work on using Fourier transforms and machine learning to model the mechanics of stellar light curves that excites her the most. Linnea also notes that naturally the evolution in AI technology and advancements recently has spurred her to continue in this field of research. In the future she hopes that her Fourier neural operator project turns into an astrophysical light curve foundation model. This would take advantage of the two ways AI can be used in science: incorporating science (domain knowledge) to inform AI, and using AI to inform science. The idea is to feed this foundational model large amounts of unstudied light curve data — too much for individuals to work with — and take advantage of its power to generalize over many tasks in addition to using domain knowledge to inform the model. This would allow for insights in light curve data that is not possible yet due to it being too much data for astronomers to work with.</p>
+
+        <p>Linnea's work over the summer at University of Hawaiʻi during her undergraduate years influenced her decision to come to UHM for her graduate studies. She notes that UHM has been able to make collaboration easy between different departments, which is key for interdisciplinary work like hers. In the future Linnea sees more of the same kind of work for herself. She notes that there is the possibility to keep working on integrating scientific domain knowledge in both the industry or academic setting, allowing her some flexibility even after her graduate studies. While her interest in AI for science research was palpable even to those outside this field, watching her eyes light up when talking about her involvement with Graduate Women In Science Hawaiʻi (GWISH) was quite the treat during her interview. Linnea's experience with astronomy being more evenly balanced between both men and women than computer science highlights just how much more inclusion is needed in the sciences, given the field of astronomy is not known for its diversity. This discrepancy was one motivator for becoming more involved in GWISH and taking on the role of Outreach Coordinator. In 2023 she designed and taught an exoplanet discovery workshop and in 2024 expanded this program to more schools, including one on the Big Island, working beside a women-only group of graduate scientists from GWISH in hopes of increasing the number of girls and women pursuing STEM degrees. In the workshop students would look at Kepler Space Telescope light curve data and identify Earth-like planets around Sun-like stars. The goal was to expose kids to space science, since it is not usually part of the high school curriculum. Additionally, creating an environment with only women mentors was an important aspect of the work, especially since it is different from the environment faced by women scientists today. For any high school or undergrad student who is contemplating research careers or graduate school she emphasized the importance of having research experience before going into graduate school. One way she was able to make that happen was by going to professors and saying "I want to do research with you. Can you help me?" and to have professors personally invested in your development as a student. "Mentors are so important — even if you end up switching disciplines they can help you get connected with the right people." She credits her first astronomy professor for a lot of her development as a researcher and is proud of herself for taking that first step to ask for help getting into research in her undergrad years.</p>
+
+        <p>Sometimes the discussion of AI advancements can be polarizing or spark fear as we enter into a world of unknowns. However, there might be some comfort in knowing that some of these advancements are coming from a harpist with wild curiosity, and a love for education and outreach.</p>
+
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>
