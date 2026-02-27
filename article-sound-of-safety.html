@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             terra:   '#793812',
@@ -33,6 +34,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -40,13 +48,22 @@
     .nav-dot { transition: transform 0.2s, opacity 0.2s; }
     .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
     .nav-link.active .nav-dot { opacity: 1; }
+    .drop-cap::first-letter {
+      font-family: 'Ruigslay', serif;
+      float: left;
+      font-size: 5em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      padding-top: 0.05em;
+      color: var(--color-sky, #4070c5);
+    }
   </style>
 </head>
 <body class="bg-cream font-sans text-prose flex min-h-screen">
 
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -64,7 +81,11 @@
       </a>
       <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
     <div class="px-8 py-7 border-t border-rule space-y-1">
@@ -87,10 +108,10 @@
       <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
     </section>
 
-    <article class="px-16 py-14 max-w-3xl">
-      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+    <article class="px-16 py-14 max-w-5xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose columns-2 gap-10">
 
-        <p>Samuel "Kei" Takazawa, a Ph.D. student specializing in infrasound and smartphone sensors, draws inspiration from his childhood experiences in earthquake-prone Japan and an interest in disaster response. This journey has led him to research in the realm of explosion monitoring, machine learning, and the innovative use of the sensors in smartphones. Growing up amidst frequent earthquakes and natural disasters in Japan, Kei's early life experiences sparked a curiosity and a commitment to addressing challenges related to these phenomena. Kei relocated to California during high school and later pursued a double major in physics and applied math at Wheaton College in Illinois.</p>
+        <p class="drop-cap">Samuel "Kei" Takazawa, a Ph.D. student specializing in infrasound and smartphone sensors, draws inspiration from his childhood experiences in earthquake-prone Japan and an interest in disaster response. This journey has led him to research in the realm of explosion monitoring, machine learning, and the innovative use of the sensors in smartphones. Growing up amidst frequent earthquakes and natural disasters in Japan, Kei's early life experiences sparked a curiosity and a commitment to addressing challenges related to these phenomena. Kei relocated to California during high school and later pursued a double major in physics and applied math at Wheaton College in Illinois.</p>
 
         <p>During his undergraduate studies, Kei's involvement with the Humanitarian Disaster Institute — through a professor's connections — allowed him to apply his developing skills in applied math to enhance disaster prediction and response. Much of Kei's work as a relief worker and researcher was in response to the magnitude 9.1 Tōhoku earthquake and tsunami in Japan in 2011, which also included the Fukushima nuclear accident. Simultaneously, Kei explored his interest in audio engineering through his media technician job working on school events and concerts, setting the foundation for his future endeavors in sound technology.</p>
 
@@ -104,7 +125,7 @@
 
         <p>Looking ahead, Kei envisions expanding his work into natural disaster applications, inspired by his upbringing in Japan and prior research experience. He contemplates expanding the use of smartphone sensors for broader geographical areas, particularly those prone to geological activity, such as the Pacific and the Ring of Fire. Kei is also passionate about open science and emphasized the need for accessible data in scientific research. He shares an anecdote about how it took two years to make an acoustic explosion dataset publicly available due to different organizational policies that funded the experiments. Data accessibility can often be a large barrier to innovation, especially for those who are not well funded or lack the connections to access data.</p>
 
-        <p>In reflecting on his interdisciplinary approach, Kei encourages a "jack of all trades" mindset, highlighting the value of diverse interests in his field. His unique blend of expertise in applied math, physics, and audio engineering exemplifies the potential for creating substantial impact in disaster-related research. Kei's passion for mitigating the consequences of disasters, combined with his versatile skill set, positions him at the intersection of technology, mathematics, and humanitarian efforts.</p>
+        <p>In reflecting on his interdisciplinary approach, Kei encourages a "jack of all trades" mindset, highlighting the value of diverse interests in his field. His unique blend of expertise in applied math, physics, and audio engineering exemplifies the potential for creating substantial impact in disaster-related research. Kei's passion for mitigating the consequences of disasters, combined with his versatile skill set, positions him at the intersection of technology, mathematics, and humanitarian efforts. <span class="text-sky text-sm">◆</span></p>
 
       </div>
     </article>

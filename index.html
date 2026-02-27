@@ -11,32 +11,72 @@
       theme: {
         extend: {
           fontFamily: {
-            display: ['Syne', 'sans-serif'],
-            serif: ['Lora', 'serif'],
-            sans: ['Inter', 'sans-serif'],
+            display: 'var(--font-display)',
+            serif:   'var(--font-serif)',
+            sans:    'var(--font-sans)',
+            name:    'var(--font-name)',
           },
           colors: {
             // Brand accents
-            terra:   '#793812',
-            sage:    '#6096f5',
-            sky:     '#4070c5',
+            terra:   'rgb(var(--color-terra) / <alpha-value>)',
+            sage:    'rgb(var(--color-sage)  / <alpha-value>)',
+            sky:     'rgb(var(--color-sky)   / <alpha-value>)',
             // Backgrounds
-            cream:   '#f7f5f0',
+            cream:   'rgb(var(--color-cream)   / <alpha-value>)',
             // Text
-            heading: '#1a1a1a',
-            prose:   '#4a4a4a',
-            muted:   '#717171',
-            faint:   '#9e9e9e',
+            heading: 'rgb(var(--color-heading) / <alpha-value>)',
+            prose:   'rgb(var(--color-prose)   / <alpha-value>)',
+            muted:   'rgb(var(--color-muted)   / <alpha-value>)',
+            faint:   'rgb(var(--color-faint)   / <alpha-value>)',
             // Surfaces & borders
-            rule:    '#e2ddd8',
-            surface: '#edeae4',
-            dark:    '#1c1c1c',
+            rule:    'rgb(var(--color-rule)    / <alpha-value>)',
+            surface: 'rgb(var(--color-surface) / <alpha-value>)',
+            dark:    'rgb(var(--color-dark)    / <alpha-value>)',
           }
         }
       }
     }
   </script>
   <style>
+    /* ── Design tokens ───────────────────────────────────────────────────────
+       Edit here to change fonts or colours site-wide.
+       Colors are space-separated R G B (no commas) so Tailwind opacity
+       modifiers like bg-terra/10 keep working.
+    ──────────────────────────────────────────────────────────────────────── */
+    :root {
+      /* Fonts */
+      --font-display:  'Syne', sans-serif;
+      --font-serif:    'Lora', serif;
+      --font-sans:     'Inter', sans-serif;
+      --font-name:     'Ruigslay', sans-serif;  /* ← name heading font */
+
+      /* Brand accents */
+      --color-terra:   121 56 18;
+      --color-sage:    96 150 245;
+      --color-sky:     64 112 197;
+
+      /* Backgrounds */
+      --color-cream:   247 245 240;
+
+      /* Text */
+      --color-heading: 26 26 26;
+      --color-prose:   74 74 74;
+      --color-muted:   113 113 113;
+      --color-faint:   158 158 158;
+
+      /* Surfaces & borders */
+      --color-rule:    226 221 216;
+      --color-surface: 237 234 228;
+      --color-dark:    28 28 28;
+    }
+
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -52,7 +92,7 @@
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
 
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -71,7 +111,11 @@
       </a>
       <a href="writing.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
 
@@ -94,39 +138,69 @@
       <img id="featured-photo" src="" alt="Featured photo" class="w-full h-auto block">
       <div class="absolute inset-0 bg-gradient-to-b from-cream/85 via-cream/50 to-transparent pointer-events-none"></div>
       <div class="absolute top-0 left-0 right-0 px-16 pt-20">
-        <p class="font-display text-terra text-xs tracking-[0.25em] uppercase mb-5">Hi, I'm</p>
-        <h1 class="font-display text-7xl font-extrabold text-sage leading-none mb-7">
+        <p class="font-display font-bold text-terra text-xs tracking-[0.25em] uppercase mb-5">Hi, I'm</p>
+        <h1 class="font-name text-7xl text-sage leading-none mb-7">
           Nina<br>Shuping
         </h1>
         <div class="flex gap-2 flex-wrap">
-          <span class="bg-terra/10 text-terra text-xs font-display tracking-widest uppercase px-3 py-1 rounded-full">Urban Planning</span>
-          <span class="bg-sage/10 text-sage text-xs font-display tracking-widest uppercase px-3 py-1 rounded-full">Science Communication</span>
-          <span class="bg-sky/10 text-sky text-xs font-display tracking-widest uppercase px-3 py-1 rounded-full">Photography</span>
+          <span class="bg-terra/10 text-terra text-xs font-display font-bold tracking-widest uppercase px-3 py-1 rounded-full border-2 border-terra/40">Urban Planning</span>
+          <span class="bg-terra/10 text-terra text-xs font-display font-bold tracking-widest uppercase px-3 py-1 rounded-full border-2 border-terra/40">Science Communication</span>
+          <span class="bg-terra/10 text-terra text-xs font-display font-bold tracking-widest uppercase px-3 py-1 rounded-full border-2 border-terra/40">Photography</span>
         </div>
       </div>
-      <p class="absolute bottom-3 right-4 text-[10px] font-display tracking-widest uppercase text-faint">Featured photo</p>
+      <p class="absolute bottom-3 right-4 text-[10px] font-display tracking-widest uppercase text-terra">Refresh page for a new featured photo</p>
     </section>
 
     <script>
       const photos = [
-        'featured_Images/_DSF5582.JPG',
-        'featured_Images/_DSF5620.JPG',
-        'featured_Images/_DSF5954.JPG',
-        'featured_Images/_DSF5977.JPG',
-        'featured_Images/_DSF6124.JPG',
-        'featured_Images/_DSF6125.JPG',
-        'featured_Images/_DSF6184.JPG',
-        'featured_Images/_DSF6602.JPG',
-        'featured_Images/_DSF6852.JPG',
-        'featured_Images/_DSF6920%202.JPG',
-        'featured_Images/_DSF6920.JPG',
-        'featured_Images/_DSF6933.JPG',
-        'featured_Images/_DSF7003.JPG',
-        'featured_Images/_DSF7005.JPG',
-        'featured_Images/_DSF7510.JPG',
-        'featured_Images/_DSF7555%202.JPG',
+        'Featured_images/_DSF3060.JPG',
+        'Featured_images/_DSF4957.JPG',
+        'Featured_images/_DSF5582.JPG',
+        'Featured_images/_DSF5612.JPG',
+        'Featured_images/_DSF5620.JPG',
+        'Featured_images/_DSF5801.JPG',
+        'Featured_images/_DSF5930.JPG',
+        'Featured_images/_DSF5954.JPG',
+        'Featured_images/_DSF5977.JPG',
+        'Featured_images/_DSF6070.JPG',
+        'Featured_images/_DSF6124.JPG',
+        'Featured_images/_DSF6125.JPG',
+        'Featured_images/_DSF6149.JPG',
+        'Featured_images/_DSF6184.JPG',
+        'Featured_images/_DSF6602.JPG',
+        'Featured_images/_DSF6901.JPG',
+        'Featured_images/_DSF6920.JPG',
+        'Featured_images/_DSF6933.JPG',
+        'Featured_images/_DSF7005.JPG',
+        'Featured_images/_DSF7387.JPG',
+        'Featured_images/_DSF7510.JPG',
+        'Featured_images/_DSF7555%202.JPG',
+        'Featured_images/_DSF7559.JPG',
       ];
-      const pick = photos[Math.floor(Math.random() * photos.length)];
+      // Shuffle-bag: show every photo once in random order before reshuffling.
+      // Guarantees no repeats and no back-to-back duplicates across cycles.
+      function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      let queue = JSON.parse(localStorage.getItem('photoQueue') || '[]');
+      const last = localStorage.getItem('lastPhoto');
+
+      if (queue.length === 0) {
+        queue = shuffle([...photos]);
+        // Avoid showing the same photo back-to-back across cycles
+        if (queue[0] === last && queue.length > 1) {
+          [queue[0], queue[queue.length - 1]] = [queue[queue.length - 1], queue[0]];
+        }
+      }
+
+      const pick = queue.shift();
+      localStorage.setItem('photoQueue', JSON.stringify(queue));
+      localStorage.setItem('lastPhoto', pick);
       document.getElementById('featured-photo').src = pick;
     </script>
 
@@ -135,10 +209,13 @@
       <h2 class="font-serif text-2xl italic text-heading mb-6">About</h2>
       <div class="max-w-2xl space-y-4 text-prose leading-relaxed">
         <p>
-          Having an interdisciplinary background allowed me to explore various topics, ultimately leading me to a passion for science communication — particularly in urban planning, sustainable development, and space science.
+          I studied sustainable urban development because I believe cities hold immense potential to be places of sustainable excellence and allow for the protection of natural environments. So many facets of our lives intersect in urban environments, making them an incredible fabric full of opportunity to build upon. This intersectional nature is what first drew me to urban planning, and what continues to motivate my work. Thoughtful planning can improve health outcomes, increase sustainability, foster community, and move us toward a more equitable world. I feel genuinely privileged to think and work within these systems, guided by a deep curiosity rooted in a longstanding interest in science and a desire to understand the "why" behind how things work.
         </p>
         <p>
-          My interest in urban planning began in high school, inspired by Jane Jacobs, and grew as I studied how cities intersect with issues like sustainability, health, and safety. Exposure to the world of astrophysics sparked my love for space science and a desire to communicate complex ideas to broader audiences.
+          I've been fortunate to follow my curiosity alongside people who are dedicated and ethical in their work. My experience includes affordable housing research in Hawai'i, white paper and community development work with the HomeMore Project, science communication writing, independent funded research on urban safety infrastructure, and a landscape architecture intensive at UC Berkeley's College of Environmental Design. Across these roles, I've consistently gravitated toward what I love most: reading, writing, and sharing curiosity at the intersection of research, design, and real-world impact.
+        </p>
+        <p>
+          Interdisciplinary ideas and methods have been the center of my own practice. As I grow I am looking to continue learning from experienced practitioners while contributing strong research, communication, and interdisciplinary thinking.
         </p>
       </div>
     </section>
@@ -206,27 +283,6 @@
             <p class="text-sm text-prose">Landscape Architecture Summer Intensive</p>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- JWST Side Project -->
-    <section class="px-16 py-16">
-      <div class="flex items-baseline gap-4 mb-2">
-        <h2 class="font-serif text-2xl italic text-heading">Side Project</h2>
-        <span class="text-xs font-display tracking-widest uppercase text-sky">Space</span>
-      </div>
-      <p class="text-muted text-sm mb-8 max-w-lg">
-        JWST data colorised by hand using SAOImage DS9 — because science and art don't have to be separate things.
-      </p>
-      <div class="grid grid-cols-2 gap-4 max-w-xl">
-        <div class="bg-dark rounded-lg aspect-video flex flex-col items-center justify-center gap-2">
-          <div class="w-8 h-8 rounded-full bg-sky/20 border border-sky/30"></div>
-          <span class="text-faint text-xs font-display tracking-widest">Southern Ring Nebula</span>
-        </div>
-        <div class="bg-dark rounded-lg aspect-video flex flex-col items-center justify-center gap-2">
-          <div class="w-8 h-8 rounded-full bg-terra/20 border border-terra/30"></div>
-          <span class="text-faint text-xs font-display tracking-widest">Carina Nebula</span>
         </div>
       </div>
     </section>

@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             // Brand accents
@@ -37,6 +38,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -52,7 +60,7 @@
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
 
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -71,7 +79,11 @@
       </a>
       <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
 
@@ -91,7 +103,7 @@
 
     <!-- Header -->
     <section class="px-16 pt-20 pb-12 border-b border-rule">
-      <p class="font-display text-sky text-xs tracking-[0.25em] uppercase mb-4">Words</p>
+      <p class="font-display font-bold text-sky text-xs tracking-[0.25em] uppercase mb-4">Words</p>
       <h1 class="font-display text-5xl font-extrabold text-heading leading-none mb-6">Writing</h1>
       <p class="text-prose max-w-lg leading-relaxed">
         Science communication, urban research, and feature writing. I write to make complex ideas accessible — and to connect people to the research that shapes their lives.
@@ -101,8 +113,8 @@
     <!-- Science Communication Articles -->
     <section class="px-16 py-14 border-b border-rule">
       <div class="flex items-baseline gap-4 mb-8">
-        <h2 class="font-serif text-xl italic text-heading">Science Communication</h2>
-        <span class="text-[10px] font-display tracking-widest uppercase text-sky border border-sky/30 px-2 py-0.5 rounded-full">Feature Articles</span>
+        <h2 class="font-serif text-xl italic text-heading">Student Feature Articles</h2>
+        <span class="text-[10px] font-display tracking-widest uppercase text-sky border border-sky/30 px-2 py-0.5 rounded-full">Hawai'i Institute of Geophysics and Planetology</span>
       </div>
 
       <div class="space-y-10 max-w-2xl">
@@ -218,7 +230,7 @@
     <!-- Urban Research Publications -->
     <section class="px-16 py-14 border-b border-rule">
       <div class="flex items-baseline gap-4 mb-8">
-        <h2 class="font-serif text-xl italic text-heading">Urban Research</h2>
+        <h2 class="font-serif text-xl italic text-heading">Affordable Housing Research</h2>
         <span class="text-[10px] font-display tracking-widest uppercase text-terra border border-terra/30 px-2 py-0.5 rounded-full">Published Work</span>
       </div>
 
@@ -228,7 +240,7 @@
           <div class="w-1 self-stretch min-h-[1rem] bg-terra/30 rounded-full flex-shrink-0 mt-1.5"></div>
           <div>
             <h3 class="font-display font-semibold text-sm text-heading tracking-wide mb-1 leading-snug">
-              Contesting the right to the city under scarcity: the case of Micronesians in Hawaii's Public Housing
+              <a href="https://doi.org/10.1080/08882746.2020.1765667" target="_blank" class="hover:text-terra transition">Contesting the right to the city under scarcity: the case of Micronesians in Hawaii's Public Housing</a>
             </h3>
             <p class="text-xs text-faint font-display tracking-wide">
               Rita, Nathalie, et al. · <em>Housing and Society</em> 47, no. 3 (2020): 165–188
@@ -240,7 +252,7 @@
           <div class="w-1 self-stretch min-h-[1rem] bg-terra/30 rounded-full flex-shrink-0 mt-1.5"></div>
           <div>
             <h3 class="font-display font-semibold text-sm text-heading tracking-wide mb-1 leading-snug">
-              Report Summarizing Recommendations for an Affordable Housing Funding Strategy
+              <a href="https://www.hauolimauloa.org/report-recommendations-for-an-affordable-housing-funding-strategy-october-2021" target="_blank" class="hover:text-terra transition">Report Summarizing Recommendations for an Affordable Housing Funding Strategy</a>
             </h3>
             <p class="text-xs text-faint font-display tracking-wide">
               Engel, Rachel, et al. · 2021
@@ -252,7 +264,7 @@
           <div class="w-1 self-stretch min-h-[1rem] bg-terra/30 rounded-full flex-shrink-0 mt-1.5"></div>
           <div>
             <h3 class="font-display font-semibold text-sm text-heading tracking-wide mb-1 leading-snug">
-              Analysis of Impediments to Fair Housing: Phase 1 Report
+              <a href="https://dbedt.hawaii.gov/hhfdc/files/2020/04/FINAL_AI.pdf" target="_blank" class="hover:text-terra transition">Analysis of Impediments to Fair Housing: Phase 1 Report</a>
             </h3>
             <p class="text-xs text-faint font-display tracking-wide">
               Garboden, Philip · University of Hawaii at Manoa, 2020
@@ -266,8 +278,8 @@
     <!-- Urban Safety Research -->
     <section class="px-16 py-14">
       <div class="flex items-baseline gap-4 mb-8">
-        <h2 class="font-serif text-xl italic text-heading">Urban Safety Research</h2>
-        <span class="text-[10px] font-display tracking-widest uppercase text-sage border border-sage/30 px-2 py-0.5 rounded-full">Portfolio</span>
+        <h2 class="font-serif text-xl italic text-heading">Honors Thesis</h2>
+        <span class="text-[10px] font-display tracking-widest uppercase text-sage border border-sage/30 px-2 py-0.5 rounded-full">Urban Safety Research</span>
       </div>
 
       <div class="max-w-2xl">
@@ -276,26 +288,26 @@
         </p>
 
         <div class="grid grid-cols-2 gap-3">
-          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+          <a href="https://docs.google.com/document/d/1y7lUn-00FgVlOmvYjDiT-SVQ704FimwrYgyYOxpRwAQ/edit" target="_blank" class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors block">
             <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">01</p>
-            <p class="text-sm font-display font-semibold text-white tracking-wide">Literature Review</p>
+            <p class="text-sm font-display font-semibold text-sky tracking-wide">Literature Review</p>
             <p class="text-xs text-muted mt-1">Ecological theories in urban safety</p>
-          </div>
-          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+          </a>
+          <a href="NCUR-poster.png" target="_blank" class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors block">
             <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">02</p>
-            <p class="text-sm font-display font-semibold text-white tracking-wide">Conference Poster</p>
+            <p class="text-sm font-display font-semibold text-sky tracking-wide">Conference Poster</p>
             <p class="text-xs text-muted mt-1">NCUR 2021 — Exploring Theories of Neighborhood Safety</p>
-          </div>
-          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+          </a>
+          <a href="https://docs.google.com/document/d/1YrNj9-GbB5sudoNFN7meW_NO8pDAC3Jd9i8WppoqgPE/edit" target="_blank" class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors block">
             <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">03</p>
-            <p class="text-sm font-display font-semibold text-white tracking-wide">Research Paper</p>
-            <p class="text-xs text-muted mt-1">Amsterdam, Copenhagen, Milan, Rome study</p>
-          </div>
-          <div class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors">
+            <p class="text-sm font-display font-semibold text-sky tracking-wide">Research Paper</p>
+            <p class="text-xs text-muted mt-1">Exploring Theories of Neighborhood Safety</p>
+          </a>
+          <a href="https://docs.google.com/presentation/d/1xJXz3jIWIau3zHsUw1YgfC8AKpVVLryFcnAFsmPFF_U/present" target="_blank" class="border border-rule rounded-lg p-4 hover:border-sage/60 transition-colors block">
             <p class="text-[10px] font-display tracking-widest uppercase text-faint mb-1">04</p>
-            <p class="text-sm font-display font-semibold text-white tracking-wide">Photo Library</p>
+            <p class="text-sm font-display font-semibold text-sky tracking-wide">Photo Library</p>
             <p class="text-xs text-muted mt-1">Safe sites documentation</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

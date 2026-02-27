@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             // Brand accents
@@ -37,6 +38,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -50,7 +58,7 @@
 
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">planner · writer · photographer</p>
@@ -66,7 +74,11 @@
       </a>
       <a href="writing.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
     <div class="px-8 py-7 border-t border-rule space-y-1">

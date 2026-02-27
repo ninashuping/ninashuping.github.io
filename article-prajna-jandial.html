@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             terra:   '#793812',
@@ -33,6 +34,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -40,13 +48,22 @@
     .nav-dot { transition: transform 0.2s, opacity 0.2s; }
     .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
     .nav-link.active .nav-dot { opacity: 1; }
+    .drop-cap::first-letter {
+      font-family: 'Ruigslay', serif;
+      float: left;
+      font-size: 5em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      padding-top: 0.05em;
+      color: var(--color-sky, #4070c5);
+    }
   </style>
 </head>
 <body class="bg-cream font-sans text-prose flex min-h-screen">
 
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -64,7 +81,11 @@
       </a>
       <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
     <div class="px-8 py-7 border-t border-rule space-y-1">
@@ -87,10 +108,10 @@
       <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
     </section>
 
-    <article class="px-16 py-14 max-w-3xl">
-      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+    <article class="px-16 py-14 max-w-5xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose columns-2 gap-10">
 
-        <p>During her undergraduate years, Prajna Jandial took the opportunity to engage in machine learning and marine biology through an internship in Massachusetts, marking a pivotal moment that ignited her passion for ocean exploration. During this internship at Woods Hole Oceanographic Institution (WHOI), she applied machine learning techniques to characterize animal behavior, focusing on understanding how squid respond to noise and its impact on the movement of a shoal. With a background in Electrical and Electronics Engineering from her bachelor's degree in India, Prajna has transitioned to Ocean and Resources Engineering in her pursuit of ocean-related endeavors. The allure of UH for Prajna lies in its flexibility and the unique opportunity to delve into oceanography at the master's level, a rare offering in many academic institutions. While Prajna has had diverse experiences in research such as developing an underwater robot, and working in virtual reality and machine learning, it was the 6 months spent in Massachusetts at WHOI that solidified her desire to work in the marine environment.</p>
+        <p class="drop-cap">During her undergraduate years, Prajna Jandial took the opportunity to engage in machine learning and marine biology through an internship in Massachusetts, marking a pivotal moment that ignited her passion for ocean exploration. During this internship at Woods Hole Oceanographic Institution (WHOI), she applied machine learning techniques to characterize animal behavior, focusing on understanding how squid respond to noise and its impact on the movement of a shoal. With a background in Electrical and Electronics Engineering from her bachelor's degree in India, Prajna has transitioned to Ocean and Resources Engineering in her pursuit of ocean-related endeavors. The allure of UH for Prajna lies in its flexibility and the unique opportunity to delve into oceanography at the master's level, a rare offering in many academic institutions. While Prajna has had diverse experiences in research such as developing an underwater robot, and working in virtual reality and machine learning, it was the 6 months spent in Massachusetts at WHOI that solidified her desire to work in the marine environment.</p>
 
         <p>Since being a kid she has had a connection to the ocean and the outdoors. For Prajna she remembers spending a lot of time watching documentaries with her dad, and also remembers liking how the people on the show got to "go to all these cool environments and see all this cool wildlife". Where many people would dive into marine biology or other related fields Prajna asserts that she loves being able to engage in the "tech side of things, and talk in numbers". "I am not the smartest person in the room but I like numbers" she states. Her research now centers around developing an algorithm for underwater robots to explore and capture the myriad sound signatures in designated areas.</p>
 
@@ -100,7 +121,7 @@
 
         <p>One thing she finds special about her experience is the opportunity to work with two female PIs. Being in Engineering and not having an opportunity to work with an all female team before, she says she really appreciates "the feminine perspective, it gives me the comfort to be insane and to try insane things". She continues "There is comfort in an all female team that provides strategies for burnout and emphasizes the importance of mental health."</p>
 
-        <p>Looking ahead, Prajna remains open to diverse opportunities. Upon completing her algorithm, potential paths include pursuing a Ph.D. or collaborating with a team willing to implement her algorithm on an underwater robot. When asked for advice to undergraduate students, she encourages them with a familiar yet elegant phrase: "Don't self reject." Prajna emphasizes the significance of reaching out to professors and taking chances, highlighting that the worst outcome is a non-response to an email inquiry.</p>
+        <p>Looking ahead, Prajna remains open to diverse opportunities. Upon completing her algorithm, potential paths include pursuing a Ph.D. or collaborating with a team willing to implement her algorithm on an underwater robot. When asked for advice to undergraduate students, she encourages them with a familiar yet elegant phrase: "Don't self reject." Prajna emphasizes the significance of reaching out to professors and taking chances, highlighting that the worst outcome is a non-response to an email inquiry. <span class="text-sky text-sm">◆</span></p>
 
       </div>
     </article>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landscape — Nina Shuping</title>
+  <title>Side Project — Nina Shuping</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <script>
@@ -56,28 +56,31 @@
 </head>
 <body class="bg-cream font-sans text-prose flex min-h-screen">
 
+  <!-- ── Sidebar ── -->
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
       <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
-      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">planner · writer · photographer</p>
+      <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
+        planner · writer · photographer
+      </p>
     </div>
     <nav class="flex-1 px-6 py-8 flex flex-col gap-0.5">
       <a href="index.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-terra opacity-0 flex-shrink-0"></span>
         About
       </a>
-      <a href="photography.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
-        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-100 flex-shrink-0"></span>
+      <a href="photography.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sage opacity-0 flex-shrink-0"></span>
         Photography
       </a>
       <a href="writing.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
         Writing/Research
       </a>
-      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
-        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+      <a href="side-project.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
         Side Project
       </a>
     </nav>
@@ -90,23 +93,32 @@
     </div>
   </aside>
 
+  <!-- ── Main Content ── -->
   <main class="ml-56 flex-1">
-    <section class="px-16 pt-20 pb-10 border-b border-rule">
-      <a href="photography.html" class="text-xs font-display tracking-widest uppercase text-faint hover:text-neutral-700 transition-colors">← Photography</a>
-      <h1 class="font-display text-4xl font-extrabold text-heading mt-4 mb-1">Landscape</h1>
-      <p class="text-xs text-faint font-display tracking-widest uppercase">6 photos</p>
+
+    <!-- Header -->
+    <section class="px-16 pt-20 pb-12 border-b border-rule">
+      <p class="font-display font-bold text-sky text-xs tracking-[0.25em] uppercase mb-4">Space</p>
+      <h1 class="font-display text-5xl font-extrabold text-heading leading-none mb-6">Side Project</h1>
+      <p class="text-prose max-w-lg leading-relaxed">
+        JWST data colorised by hand using SAOImage DS9 — because science and art don't have to be separate things.
+      </p>
     </section>
 
-    <section class="px-16 py-12">
-      <div class="columns-2 gap-4 space-y-4">
-        <img src="Landscape/_DSF5954.JPG" alt="" class="w-full h-auto rounded-lg break-inside-avoid">
-        <img src="Landscape/_DSF6069.JPG" alt="" class="w-full h-auto rounded-lg break-inside-avoid">
-        <img src="Landscape/_DSF6600.JPG" alt="" class="w-full h-auto rounded-lg break-inside-avoid">
-        <img src="Landscape/_DSF6900.JPG" alt="" class="w-full h-auto rounded-lg break-inside-avoid">
-        <img src="Landscape/_DSF6905.JPG" alt="" class="w-full h-auto rounded-lg break-inside-avoid">
-        <img src="Landscape/_DSF6931.JPG" alt="" class="w-full h-auto rounded-lg break-inside-avoid">
+    <!-- JWST Images -->
+    <section class="px-16 py-16">
+      <div class="grid grid-cols-2 gap-4 max-w-xl">
+        <div class="bg-dark rounded-lg aspect-video flex flex-col items-center justify-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-sky/20 border border-sky/30"></div>
+          <span class="text-faint text-xs font-display tracking-widest">Southern Ring Nebula</span>
+        </div>
+        <div class="bg-dark rounded-lg aspect-video flex flex-col items-center justify-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-terra/20 border border-terra/30"></div>
+          <span class="text-faint text-xs font-display tracking-widest">Carina Nebula</span>
+        </div>
       </div>
     </section>
+
   </main>
 </body>
 </html>

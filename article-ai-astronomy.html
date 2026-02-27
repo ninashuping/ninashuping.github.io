@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             terra:   '#793812',
@@ -33,6 +34,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -40,13 +48,22 @@
     .nav-dot { transition: transform 0.2s, opacity 0.2s; }
     .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
     .nav-link.active .nav-dot { opacity: 1; }
+    .drop-cap::first-letter {
+      font-family: 'Ruigslay', serif;
+      float: left;
+      font-size: 5em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      padding-top: 0.05em;
+      color: var(--color-sky, #4070c5);
+    }
   </style>
 </head>
 <body class="bg-cream font-sans text-prose flex min-h-screen">
 
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -64,7 +81,11 @@
       </a>
       <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
     <div class="px-8 py-7 border-t border-rule space-y-1">
@@ -87,10 +108,10 @@
       <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
     </section>
 
-    <article class="px-16 py-14 max-w-3xl">
-      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+    <article class="px-16 py-14 max-w-5xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose columns-2 gap-10">
 
-        <p>Nicknamed "The Barrier," the Ross ice shelf sits in an inlet of the Antarctic continent spanning over 500 thousand square kilometers. While there are many researchers who are interested in what Antarctica has to offer, the Ross ice shelf became an area of study when researchers noticed significant melting and the severing of large pieces of the ice shelf. This poses a real threat to sea level rise, and as a result, the monitoring and analysis of threats to the ice shelf have been ongoing. This was Linnea Wolniewicz's first exposure to using artificial intelligence (AI) for science to assess the threat of waves to the ice shelf's integrity. While using artificial intelligence for science is now Linnea's topic of interest for her Ph.D., she did not start out doing computer science or environmental work.</p>
+        <p class="drop-cap">Nicknamed "The Barrier," the Ross ice shelf sits in an inlet of the Antarctic continent spanning over 500 thousand square kilometers. While there are many researchers who are interested in what Antarctica has to offer, the Ross ice shelf became an area of study when researchers noticed significant melting and the severing of large pieces of the ice shelf. This poses a real threat to sea level rise, and as a result, the monitoring and analysis of threats to the ice shelf have been ongoing. This was Linnea Wolniewicz's first exposure to using artificial intelligence (AI) for science to assess the threat of waves to the ice shelf's integrity. While using artificial intelligence for science is now Linnea's topic of interest for her Ph.D., she did not start out doing computer science or environmental work.</p>
 
         <p>While Linnea was an astrophysics undergraduate student at the University of Colorado Boulder she studied abroad at the University of Edinburgh. As a harpist who had to leave her harp behind, she found that studying Scottish folk music was an impactful surprise during her time away and was even gifted a Celtic harp to play. As a classically trained harpist used to reading off of sheet music, the switch to playing folk music where everyone learns by ear was a fun one. "In folk music there is no sheet music or writing down of the songs," she states. "You attend a session where someone plays a piece aloud slowly and you pick up the tune and join in. I felt like I was in a movie. It was so amazing, we'd meet at a pub downtown every week and play for hours. The music was never ending because whenever one tune finished someone else would just start a new one, and if you knew it you'd join in. This was definitely a highlight of my study abroad." What seems like an odd pairing of interests might actually be the result of the kind of learning environment that Linnea grew up in, rather than chance. Growing up, Linnea's mom was a jeweler and her dad was a computer scientist. This environment helped develop and take advantage of both the artistic and engineer's mind. While she had always enjoyed math and physics, the sense of community she experienced with music remains a notable highlight.</p>
 
@@ -106,7 +127,7 @@
 
         <p>Linnea's work over the summer at University of Hawaiʻi during her undergraduate years influenced her decision to come to UHM for her graduate studies. She notes that UHM has been able to make collaboration easy between different departments, which is key for interdisciplinary work like hers. In the future Linnea sees more of the same kind of work for herself. She notes that there is the possibility to keep working on integrating scientific domain knowledge in both the industry or academic setting, allowing her some flexibility even after her graduate studies. While her interest in AI for science research was palpable even to those outside this field, watching her eyes light up when talking about her involvement with Graduate Women In Science Hawaiʻi (GWISH) was quite the treat during her interview. Linnea's experience with astronomy being more evenly balanced between both men and women than computer science highlights just how much more inclusion is needed in the sciences, given the field of astronomy is not known for its diversity. This discrepancy was one motivator for becoming more involved in GWISH and taking on the role of Outreach Coordinator. In 2023 she designed and taught an exoplanet discovery workshop and in 2024 expanded this program to more schools, including one on the Big Island, working beside a women-only group of graduate scientists from GWISH in hopes of increasing the number of girls and women pursuing STEM degrees. In the workshop students would look at Kepler Space Telescope light curve data and identify Earth-like planets around Sun-like stars. The goal was to expose kids to space science, since it is not usually part of the high school curriculum. Additionally, creating an environment with only women mentors was an important aspect of the work, especially since it is different from the environment faced by women scientists today. For any high school or undergrad student who is contemplating research careers or graduate school she emphasized the importance of having research experience before going into graduate school. One way she was able to make that happen was by going to professors and saying "I want to do research with you. Can you help me?" and to have professors personally invested in your development as a student. "Mentors are so important — even if you end up switching disciplines they can help you get connected with the right people." She credits her first astronomy professor for a lot of her development as a researcher and is proud of herself for taking that first step to ask for help getting into research in her undergrad years.</p>
 
-        <p>Sometimes the discussion of AI advancements can be polarizing or spark fear as we enter into a world of unknowns. However, there might be some comfort in knowing that some of these advancements are coming from a harpist with wild curiosity, and a love for education and outreach.</p>
+        <p>Sometimes the discussion of AI advancements can be polarizing or spark fear as we enter into a world of unknowns. However, there might be some comfort in knowing that some of these advancements are coming from a harpist with wild curiosity, and a love for education and outreach. <span class="text-sky text-sm">◆</span></p>
 
       </div>
     </article>

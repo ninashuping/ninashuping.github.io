@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             terra:   '#793812',
@@ -33,6 +34,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -40,13 +48,22 @@
     .nav-dot { transition: transform 0.2s, opacity 0.2s; }
     .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
     .nav-link.active .nav-dot { opacity: 1; }
+    .drop-cap::first-letter {
+      font-family: 'Ruigslay', serif;
+      float: left;
+      font-size: 5em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      padding-top: 0.05em;
+      color: var(--color-sky, #4070c5);
+    }
   </style>
 </head>
 <body class="bg-cream font-sans text-prose flex min-h-screen">
 
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -64,7 +81,11 @@
       </a>
       <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
     <div class="px-8 py-7 border-t border-rule space-y-1">
@@ -87,10 +108,10 @@
       <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
     </section>
 
-    <article class="px-16 py-14 max-w-3xl">
-      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+    <article class="px-16 py-14 max-w-5xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose columns-2 gap-10">
 
-        <p>In 1999 China successfully launched the Shenzhou 1, an uncrewed spacecraft designed for human spaceflight. At the time Hao Wang, who is from Qingdao in China, was only about 8 years old. Upon hearing the news of the launch Dr. Wang remembers trying to draw a picture of the spacecraft but "it looked more like a UFO than a spacecraft" she says. From then on she found herself curious about "why spacecraft are that shape, and what they actually look like". Following that interest led Dr. Wang into a career in astronautics and planetology. She now works as a postdoctoral researcher for the Robotics and Space Exploration Lab (RoSE Lab) out of the University of Hawaii. At the time Dr. Wang was choosing where to study after high school, China did not have as many well developed aerospace programs. This led Dr. Wang to Purdue University because of their strong aerospace program.</p>
+        <p class="drop-cap">In 1999 China successfully launched the Shenzhou 1, an uncrewed spacecraft designed for human spaceflight. At the time Hao Wang, who is from Qingdao in China, was only about 8 years old. Upon hearing the news of the launch Dr. Wang remembers trying to draw a picture of the spacecraft but "it looked more like a UFO than a spacecraft" she says. From then on she found herself curious about "why spacecraft are that shape, and what they actually look like". Following that interest led Dr. Wang into a career in astronautics and planetology. She now works as a postdoctoral researcher for the Robotics and Space Exploration Lab (RoSE Lab) out of the University of Hawaii. At the time Dr. Wang was choosing where to study after high school, China did not have as many well developed aerospace programs. This led Dr. Wang to Purdue University because of their strong aerospace program.</p>
 
         <p>After completing her bachelor's degree she went on to work on air traffic control research for her masters. Her work was on the implementation of GPS systems in aircraft and assessing the advantages of the GPS system over the current radar system. She states that at the time "that idea was controversial, using GPS was thought to create a security risk, but after the disappearance of MH370, people began accepting the idea of GPS systems". Now the use of GPS systems by air traffic control is widespread. However, throughout her work on her masters she realized that she was far more interested in space and wanted to get back into work with astronautical engineering. She describes feeling fascinated by the idea that "space is everything, and there is nothing outside of it. Space transportation and aerospace engineering helps us get to those places to learn more about it".</p>
 
@@ -100,7 +121,7 @@
 
         <p>The plan for now is to stay here, she wants to stay in academia for as long as possible and hopes to obtain a faculty position. Dr. Wang's curiosity and drive for continued learning is palpable and enough to get anyone excited about her work. She tells us that she loves the opportunity to continue with her work where she feels "calm and comfortable". Right now a large part of her work, and her lab's work, is on autonomous rover operations. Here Hawaii has another large advantage, the closest analog to lunar terrain. Lava fields on the Big Island of Hawaii will help the team better understand the interaction between the rover and the surface of the moon. Also excited by research in astrophysics and machine learning, it seems as if she will never run out of things to study and things to learn. When asked what some of her largest challenges were over the course of her academic journey she says "picking just one thing to study, I have broad interests and always want to explore lots of different topics".</p>
 
-        <p>Dr. Wang's advice for undergrad students continuing their education is threefold. Study something you are intrinsically curious about, study different topics, and read, a lot. "Your interest in a topic and motivation is what will keep you going during challenges, study things you are interested in […] read papers on topics you think you like, lots of reading is helpful in finding a real interest".</p>
+        <p>Dr. Wang's advice for undergrad students continuing their education is threefold. Study something you are intrinsically curious about, study different topics, and read, a lot. "Your interest in a topic and motivation is what will keep you going during challenges, study things you are interested in […] read papers on topics you think you like, lots of reading is helpful in finding a real interest". <span class="text-sky text-sm">◆</span></p>
 
       </div>
     </article>

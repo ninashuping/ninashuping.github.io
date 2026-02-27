@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             terra:   '#793812',
@@ -33,6 +34,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -40,13 +48,22 @@
     .nav-dot { transition: transform 0.2s, opacity 0.2s; }
     .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
     .nav-link.active .nav-dot { opacity: 1; }
+    .drop-cap::first-letter {
+      font-family: 'Ruigslay', serif;
+      float: left;
+      font-size: 5em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      padding-top: 0.05em;
+      color: var(--color-sky, #4070c5);
+    }
   </style>
 </head>
 <body class="bg-cream font-sans text-prose flex min-h-screen">
 
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -64,7 +81,11 @@
       </a>
       <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
     <div class="px-8 py-7 border-t border-rule space-y-1">
@@ -87,10 +108,10 @@
       <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
     </section>
 
-    <article class="px-16 py-14 max-w-3xl">
-      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+    <article class="px-16 py-14 max-w-5xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose columns-2 gap-10">
 
-        <p>Hans Mertens has worked in various fields, including medicine, the automotive industry and planetary exploration. He cares about working on interesting problems to solve using machine learning and robotics in these diverse contexts. Each of these fields provides interesting yet vastly different ways to grow his skillset as an engineer and apply machine learning to robotics. Hans studied at RWTH Aachen university, in Germany where he is from, as a mechanical engineer. During his undergraduate years Hans worked at Mercedes doing engine development. However at the end of his undergraduate degree he had realized that he enjoyed the data science aspects of his work more than the mechanical. Additionally this was a time where machine learning and artificial intelligence was making fast leaps and was piquing the interest of academics and tech enthusiasts alike. Hans was no different. He worked to include more machine learning into his research during his masters which he also got at RWTH Aachen.</p>
+        <p class="drop-cap">Hans Mertens has worked in various fields, including medicine, the automotive industry and planetary exploration. He cares about working on interesting problems to solve using machine learning and robotics in these diverse contexts. Each of these fields provides interesting yet vastly different ways to grow his skillset as an engineer and apply machine learning to robotics. Hans studied at RWTH Aachen university, in Germany where he is from, as a mechanical engineer. During his undergraduate years Hans worked at Mercedes doing engine development. However at the end of his undergraduate degree he had realized that he enjoyed the data science aspects of his work more than the mechanical. Additionally this was a time where machine learning and artificial intelligence was making fast leaps and was piquing the interest of academics and tech enthusiasts alike. Hans was no different. He worked to include more machine learning into his research during his masters which he also got at RWTH Aachen.</p>
 
         <p>During this time he started working in the medical field helping to advance the capabilities of robots used to help people rehabilitate injuries. Hans explained that in Germany the medical field is not privatized and as a result there are a lot of open jobs in medicine, particularly nursing and physical therapists. The hope was to have a robot be able to help people with their physical therapy and fill in some of these labor gaps. He states that usually in physical therapy you get a plan for exercises that you do with the doctor and at home. Instead these robots would help you do these exercises and track your progress, help you do the right exercises and apply the right pressure so that you could heal faster and better. In order to do this however the robot has to have an incredible understanding of the human body. Hans worked on the code that helped find the spatial coordinates of joints using a convolutional neural network and simple cameras. Hans was hoping to study abroad during his masters and had found Dr. Frances Zhu at UH Manoa because of their shared interest in machine learning and robotics. Due to Covid, he was unable to study abroad during his master's degree, but was given the opportunity to conduct research for his thesis at UH Manoa. Now pursuing his PhD in Hawaii, Hans works with the Robotics Space Exploration lab (RoSE lab) to develop machine learning models for learning how rovers move on planetary soil. Currently humans control the rover's movement and the RoSE lab is developing autonomous rover movement with the goal of having a larger number of smaller autonomous rovers. In order to do that however, we must first understand and teach these rovers how to move on different planetary terrain. This includes answering questions about when you go over vs around a rock, how much the rover is sinking into the regolith, whether the robot is on a hill or not, how the robot can move on the terrain, what is the composition of the regolith, sandy or rocky?</p>
 
@@ -100,7 +121,7 @@
 
         <p>For other people interested in rovers and or machine learning Hans points out some advantages of being in Hawaii at UH. "There are good analogs for rover environments on the Big Island and UH has good classes and knowledgeable people to work with". For the engineers, there is a training program he participates in through the National Science Foundation that teaches engineers how to use machine learning to solve some of Hawaii's most pressing problems, such as food security, energy supply and transportation.</p>
 
-        <p>Surprisingly, the transition from Germany to Hawaii was a smooth one, crediting finding good friends as one reason it took only a few months to get settled. "Hawaii is interesting because you have American culture and you have Hawaiian culture. And while I had done a lot of traveling previously, I didn't really know much about either of these places." Hans has found lots of reasons to like it here, and the year round hiking, surfing and scuba diving doesn't hurt either.</p>
+        <p>Surprisingly, the transition from Germany to Hawaii was a smooth one, crediting finding good friends as one reason it took only a few months to get settled. "Hawaii is interesting because you have American culture and you have Hawaiian culture. And while I had done a lot of traveling previously, I didn't really know much about either of these places." Hans has found lots of reasons to like it here, and the year round hiking, surfing and scuba diving doesn't hurt either. <span class="text-sky text-sm">◆</span></p>
 
       </div>
     </article>

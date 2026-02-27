@@ -14,6 +14,7 @@
             display: ['Syne', 'sans-serif'],
             serif: ['Lora', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            name: ['Ruigslay', 'sans-serif'],
           },
           colors: {
             // Brand accents
@@ -37,6 +38,13 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: 'Ruigslay';
+      src: url('fonts/Ruigslay.otf') format('opentype'),
+           url('fonts/Ruigslay.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     .sidebar-dots {
       background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 18px 18px;
@@ -44,6 +52,15 @@
     .nav-dot { transition: transform 0.2s, opacity 0.2s; }
     .nav-link:hover .nav-dot { opacity: 1; transform: scale(1.3); }
     .nav-link.active .nav-dot { opacity: 1; }
+    .drop-cap::first-letter {
+      font-family: 'Ruigslay', serif;
+      float: left;
+      font-size: 5em;
+      line-height: 0.8;
+      padding-right: 0.08em;
+      padding-top: 0.05em;
+      color: var(--color-sky, #4070c5);
+    }
   </style>
 </head>
 <body class="bg-cream font-sans text-prose flex min-h-screen">
@@ -51,7 +68,7 @@
   <!-- ── Sidebar ── -->
   <aside class="sidebar-dots w-56 bg-terra text-neutral-100 flex flex-col fixed h-screen z-10">
     <div class="px-8 pt-10 pb-7 border-b border-rule">
-      <a href="index.html" class="font-display text-2xl font-extrabold leading-none tracking-tight text-sage block">
+      <a href="index.html" class="font-name text-2xl leading-none tracking-tight text-sage block">
         Nina<br>Shuping
       </a>
       <p class="text-muted text-[10px] mt-3 tracking-[0.2em] uppercase font-display">
@@ -69,7 +86,11 @@
       </a>
       <a href="writing.html" class="nav-link active group flex items-center gap-3 px-3 py-2.5 rounded text-white text-sm font-display tracking-wide bg-black/25">
         <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-100 flex-shrink-0"></span>
-        Writing
+        Writing/Research
+      </a>
+      <a href="side-project.html" class="nav-link group flex items-center gap-3 px-3 py-2.5 rounded text-faint hover:text-white hover:bg-black/20 transition-all text-sm font-display tracking-wide">
+        <span class="nav-dot w-1.5 h-1.5 rounded-full bg-sky opacity-0 flex-shrink-0"></span>
+        Side Project
       </a>
     </nav>
     <div class="px-8 py-7 border-t border-rule space-y-1">
@@ -93,10 +114,10 @@
       <p class="text-faint text-sm font-display tracking-wide">By Nina Shuping</p>
     </section>
 
-    <article class="px-16 py-14 max-w-3xl">
-      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose">
+    <article class="px-16 py-14 max-w-5xl">
+      <div class="font-serif text-lg leading-relaxed space-y-6 text-prose columns-2 gap-10">
 
-        <p>For those wondering what lunar soil smells like, Marley Chertok will tell you that it smells like smoked meat in an old basement. This is one of the strange advantages of working in the world of planetary geology. Being able to be independent and focus on topics of interest to her while being homeschooled set Marley up for success in college studying geology. During her time in college at Temple University, she studied hydrology and worked for The Academy of Natural Sciences in Philadelphia doing water quality research, furthering her laboratory expertise. However, Marley describes the field camp she did mapping geologic units in Wyoming and South Dakota as the most impactful towards her passion for field work. "That experience contributed deeply to the geologist I am today," she states. When she was nominated for an internship with the U.S. Geological Survey (USGS), she had the opportunity to work on the identification of spectral properties of cyanobacteria in order to better predict harmful algal blooms. This first exposure and work with spectroscopy, which is the study of how different objects absorb and radiate light in the electromagnetic spectrum, opened the door to other interesting applications of the science for Marley.</p>
+        <p class="drop-cap">For those wondering what lunar soil smells like, Marley Chertok will tell you that it smells like smoked meat in an old basement. This is one of the strange advantages of working in the world of planetary geology. Being able to be independent and focus on topics of interest to her while being homeschooled set Marley up for success in college studying geology. During her time in college at Temple University, she studied hydrology and worked for The Academy of Natural Sciences in Philadelphia doing water quality research, furthering her laboratory expertise. However, Marley describes the field camp she did mapping geologic units in Wyoming and South Dakota as the most impactful towards her passion for field work. "That experience contributed deeply to the geologist I am today," she states. When she was nominated for an internship with the U.S. Geological Survey (USGS), she had the opportunity to work on the identification of spectral properties of cyanobacteria in order to better predict harmful algal blooms. This first exposure and work with spectroscopy, which is the study of how different objects absorb and radiate light in the electromagnetic spectrum, opened the door to other interesting applications of the science for Marley.</p>
 
         <p>Transitioning into a more spectroscopy role, Marley was part of a team observing land use changes, and environmental impacts of refugee settlements in Zambia. In this study the research team was comparing the land use change of two different settlements, one in a tropical climate and another in a dry climate. The science team determined how protracted refugee settlements affect the environment and made recommendations for how emergency settlements can be better planned with both environmental and human needs in mind. With more experience in remote sensing tools she got involved with the Astrogeology Science Center at USGS, where she worked studying the regolith on the Moon.</p>
 
@@ -106,7 +127,7 @@
 
         <p>In Marley's work, she is comparing craters in the highlands to craters in the mare using ejecta blankets and crater depth to understand the Moon's regolith — the top layer of unconsolidated material above the bedrock. When an impactor hits the lunar surface it excavates the regolith and throws rocks into the air, which land on the surrounding surface; this is called the ejecta blanket, and lots of rocks strewn about around the crater is an indicator of a thin regolith. When comparing impact craters in the lunar mare, there seems to be less rocky ejecta being produced. This is an indication of a few things. The first is that the rock of the lunar mare is different from the regolith of the older highland surface. The second is that the regolith of the lunar mare is thinner than on the highlands. Another consideration is that the rocks in the ejecta blanket on the mare are breaking down faster than in the highlands. "It is difficult to decouple these things," Marley states, "It is most likely that the answer is a combination of all of it." Since it is difficult to date individual craters, we often only have an order of events, not a dated timeline. This makes it increasingly difficult to determine at what point in the erosion process each rock, or ejecta blanket as a whole, is in. Not knowing this makes it difficult to make direct comparisons of craters of the same age. However, Marley is continuing to use clues to help better understand the geologic process of the Moon.</p>
 
-        <p>Marley hopes that her work will take her "figuratively to the Moon and beyond. I hope that by understanding the Moon we can better understand the planetary processes of other bodies. We can use craters to shed light on the subsurface of planets." She is also excited by how this kind of work changes when dealing with icy bodies. "Impact craters on ice will behave differently than rocky surfaces due to their composition and relative strength." Knowing that many terrestrial planets have icy surfaces, the future work in this area is vast. This is one of the things that she really enjoys about being part of HIGP — there are opportunities to "dabble in different areas of work." On 'dabbling,' Marley sees this as a key to success: "I want to dabble in everything and have dabbled in a lot of things," and suggests to other students that "It is good to try different fields. At UH it is not hard to get involved — you have to practice pursuing things and be eager and interested. I tried a bunch of things and I am glad I did!"</p>
+        <p>Marley hopes that her work will take her "figuratively to the Moon and beyond. I hope that by understanding the Moon we can better understand the planetary processes of other bodies. We can use craters to shed light on the subsurface of planets." She is also excited by how this kind of work changes when dealing with icy bodies. "Impact craters on ice will behave differently than rocky surfaces due to their composition and relative strength." Knowing that many terrestrial planets have icy surfaces, the future work in this area is vast. This is one of the things that she really enjoys about being part of HIGP — there are opportunities to "dabble in different areas of work." On 'dabbling,' Marley sees this as a key to success: "I want to dabble in everything and have dabbled in a lot of things," and suggests to other students that "It is good to try different fields. At UH it is not hard to get involved — you have to practice pursuing things and be eager and interested. I tried a bunch of things and I am glad I did!" <span class="text-sky text-sm">◆</span></p>
 
       </div>
     </article>
